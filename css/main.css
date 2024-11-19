@@ -11,15 +11,6 @@ body {
   position: absolute;
 }
 
-.grid-container {
-  display: grid;
-  grid-template-areas: "header" "main" "footer";
-}
-
-header {
-  grid-area: header;
-}
-
 nav {
   display: flex;
   justify-content: center;
@@ -27,7 +18,7 @@ nav {
   align-items: center;
   margin: 0 0 1rem 0;
 }
-nav .outer_search_field {
+nav .search_field_border {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -37,8 +28,9 @@ nav .outer_search_field {
   width: 65%;
   align-items: center;
 }
-nav .outer_search_field .search_field {
+nav .search_field_border .search_field {
   border: none;
+  max-width: calc(100vw - 100%);
 }
 nav .nav_ul_flex {
   display: flex;
@@ -68,7 +60,7 @@ nav #nav_icons {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1.25rem;
+  gap: 1rem;
 }
 nav #nav_icons a {
   color: black;
@@ -81,8 +73,23 @@ nav #nav_icons a {
   padding: 0 1rem 0 0;
 }
 
+#bredcrum_list {
+  display: flex;
+  gap: 0.75rem;
+  list-style: none;
+  padding: 0;
+  margin: 4rem 0 1.5rem 0;
+  font-size: 0.85rem;
+}
+#bredcrum_list a {
+  text-decoration: none;
+  color: black;
+}
+#bredcrum_list #bold {
+  font-weight: bold;
+}
+
 #main-grid-container {
-  grid-area: main;
   display: grid;
   grid-template-areas: "banner" "popular_products" "popular_products" "reviews";
 }
@@ -163,6 +170,8 @@ nav #nav_icons a {
 }
 #popular_products .product_card .bold {
   font-weight: bold;
+  text-decoration: none;
+  color: black;
 }
 #popular_products .product_card img {
   width: 100%;
@@ -180,6 +189,7 @@ nav #nav_icons a {
 #popular_products .product_card .product_name_price {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 #popular_products .product_card .reviews {
   display: flex;
@@ -415,6 +425,176 @@ nav #nav_icons a {
   margin: 1.5rem 0;
 }
 
+#add_product {
+  font-size: 0.85rem;
+}
+#add_product #product_img_grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: repeat(auto, 3);
+  gap: 1rem;
+}
+#add_product #product_img_grid #product_img1 {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+#add_product #product_img_grid #product_img2 {
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+#add_product #product_img_grid #product_img3 {
+  grid-column: 1/2;
+  grid-row: 3/4;
+}
+#add_product #product_img_grid #product_img4 {
+  grid-column: 2/3;
+  grid-row: 1/4;
+  max-width: 100%;
+  max-height: calc(2rem + 405px);
+  min-width: 100%;
+  min-height: calc(2rem + 405px);
+}
+#add_product .product_name {
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+#add_product #brand_name {
+  text-transform: uppercase;
+  color: gray;
+  text-decoration: underline;
+  font-size: 1rem;
+}
+#add_product #bold {
+  font-weight: bold;
+}
+#add_product #choose_size {
+  margin-bottom: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  row-gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+}
+#add_product #choose_size select {
+  width: 100%;
+  padding: 1rem;
+}
+#add_product #choose_size input {
+  width: calc(100% - 4rem);
+  padding: 1rem;
+  background-color: black;
+  color: white;
+}
+#add_product #choose_size i {
+  border: solid black 1px;
+  padding: 1rem;
+  font-size: 1rem;
+}
+
+#product_info {
+  font-size: 0.85rem;
+  border-bottom: solid black 1px;
+}
+#product_info details {
+  padding: 1rem;
+  border-top: solid black 1px;
+}
+#product_info details summary {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+}
+#product_info details table {
+  text-transform: uppercase;
+}
+
+#product_review_frame details {
+  padding: 1rem;
+  font-size: 0.85rem;
+}
+#product_review_frame details summary {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+#product_review_frame details summary #bold {
+  font-weight: bold;
+}
+#product_review_frame details summary section {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+#product_review_frame details #product_review {
+  padding: 1rem;
+  border: solid rgb(231, 231, 231) 1px;
+  border-radius: 2rem;
+}
+#product_review_frame details #product_review section {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+#similar_products {
+  font-size: 0.85rem;
+}
+#similar_products h2 {
+  font-size: 1.3rem;
+}
+#similar_products a {
+  text-decoration: none;
+}
+#similar_products #scroll_section {
+  display: flex;
+  flex-direction: row;
+  overflow: scroll;
+  gap: 1rem;
+}
+#similar_products #scroll_section .product {
+  margin: 1rem 0;
+}
+#similar_products #scroll_section .product .product_image {
+  background-image: url("https://picsum.photos/230");
+  border-radius: 1rem;
+}
+#similar_products #scroll_section .product .product_image i {
+  font-size: 1rem;
+  position: sticky;
+  color: white;
+  margin: 0.5rem 0.5rem 11rem 11rem;
+  padding: 0.5rem;
+  background-color: gray;
+  border-radius: 2rem;
+  text-align: right;
+}
+#similar_products #scroll_section .product .product_name_and_price {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 1rem;
+}
+#similar_products #scroll_section .product .product_name_and_price .product_name {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin: 1rem 0 0 0;
+}
+#similar_products #scroll_section .product .product_name_and_price p {
+  margin: 0;
+}
+#similar_products #scroll_section .product .product_score {
+  margin-top: 1.2rem;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  gap: 0.4rem;
+}
+
 footer {
   border-top: solid rgb(175, 175, 175) 2px;
   display: flex;
@@ -472,10 +652,6 @@ footer #shortcut_section ul li a {
   color: black;
   font-size: 0.8rem;
 }
-footer #socials_section {
-  /*grid-column: 1 / 3;
-  grid-row: 3 / 4;*/
-}
 footer #socials_section ul {
   padding: 0;
   display: flex;
@@ -484,4 +660,32 @@ footer #socials_section ul {
 }
 footer #socials_section ul li {
   list-style: none;
-}/*# sourceMappingURL=main.css.map */
+}
+
+/* Tablet versjon */
+@media only screen and (min-width: 760px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(auto, 3);
+  }
+  header {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+  #bredcrum_list {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    margin: 0;
+  }
+  main {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    max-width: calc(100vw - 2rem);
+  }
+  footer {
+    grid-column: 1/3;
+    grid-row: 3/4;
+  }
+}
+/* Desktop versjon *//*# sourceMappingURL=main.css.map */
