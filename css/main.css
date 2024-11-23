@@ -44,17 +44,20 @@ nav .nav_ul_flex {
 }
 nav .nav_ul_flex li a {
   color: black;
-  text-decoration: none; /* https://www.w3schools.com/cssref/pr_text_text-decoration.php */
-}
-nav .nav_ul_flex li a #logo {
-  font-size: 50px;
-  font-weight: bold; /* https://www.w3schools.com/cssref/pr_font_weight.php */
-  padding: 1rem;
-  margin: 0;
+  text-decoration: none;
 }
 nav .nav_ul_flex li a:active {
   -webkit-text-decoration: underline black;
-          text-decoration: underline black; /* https://www.w3schools.com/cssref/tryit.php?filename=trycss_sel_link_more1 */
+          text-decoration: underline black;
+}
+nav .nav_ul_flex li #logo p {
+  font-size: 3rem;
+  font-weight: bold;
+  padding: 1rem;
+  margin: 0;
+}
+nav .nav_ul_flex li #logo:active {
+  text-decoration: none;
 }
 nav #nav_icons {
   display: flex;
@@ -85,24 +88,22 @@ nav #nav_icons a {
   text-decoration: none;
   color: black;
 }
-#bredcrum_list #bold {
+#bredcrum_list .bold {
   font-weight: bold;
 }
 
-#main-grid-container {
-  display: grid;
-  grid-template-areas: "banner" "popular_products" "popular_products" "reviews";
+#arrows {
+  display: none;
 }
 
 #banner {
-  grid-area: banner;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   text-align: right;
   margin: 1rem 0;
   padding: 3rem;
-  border-radius: 1rem;
+  border-radius: 2rem;
   background-image: url("https://picsum.photos/600/600");
   background-color: rgba(255, 255, 255, 0.2);
   background-blend-mode: lighten;
@@ -122,6 +123,14 @@ nav #nav_icons a {
   text-decoration: none;
   border-radius: 1.5rem;
   padding: 1rem;
+}
+
+#banner2 {
+  display: none;
+}
+
+#banner3 {
+  display: none;
 }
 
 .centered_h {
@@ -217,25 +226,25 @@ nav #nav_icons a {
   flex-wrap: wrap;
   gap: 1rem;
 }
-#popular_categories #category_section .category_container {
+#popular_categories #category_section .category_container, #popular_categories #category_section .category_container2, #popular_categories #category_section .category_container3, #popular_categories #category_section .category_container4, #popular_categories #category_section .category_container5 {
   width: 100%;
   background-image: url("https://picsum.photos/600/600");
   border-radius: 1rem;
 }
-#popular_categories #category_section .category_container article {
+#popular_categories #category_section .category_container article, #popular_categories #category_section .category_container2 article, #popular_categories #category_section .category_container3 article, #popular_categories #category_section .category_container4 article, #popular_categories #category_section .category_container5 article {
   border-radius: 1rem;
   background-color: rgba(255, 255, 255, 0.4);
   padding: 1rem;
   -webkit-backdrop-filter: blur(3px);
           backdrop-filter: blur(3px); /* https://developer.mozilla.org/en-US/docs/Web/CSS/backdrop-filter */
 }
-#popular_categories #category_section .category_container article h4 {
+#popular_categories #category_section .category_container article h4, #popular_categories #category_section .category_container2 article h4, #popular_categories #category_section .category_container3 article h4, #popular_categories #category_section .category_container4 article h4, #popular_categories #category_section .category_container5 article h4 {
   text-transform: uppercase; /* https://developer.mozilla.org/en-US/docs/Web/CSS/text-transform */
   font-size: 1.2rem;
   color: white;
   margin: 6rem 0;
 }
-#popular_categories #category_section .category_container article #category_3 {
+#popular_categories #category_section .category_container article #category_3, #popular_categories #category_section .category_container2 article #category_3, #popular_categories #category_section .category_container3 article #category_3, #popular_categories #category_section .category_container4 article #category_3, #popular_categories #category_section .category_container5 article #category_3 {
   margin: 12rem 0;
 }
 
@@ -464,7 +473,7 @@ nav #nav_icons a {
   text-decoration: underline;
   font-size: 1rem;
 }
-#add_product #bold {
+#add_product .bold {
   font-weight: bold;
 }
 #add_product #choose_size {
@@ -521,10 +530,7 @@ nav #nav_icons a {
   justify-content: space-between;
   text-align: center;
 }
-#product_review_frame details summary #bold {
-  font-weight: bold;
-}
-#product_review_frame details summary section {
+#product_review_frame details summary span {
   display: flex;
   align-items: center;
   gap: 0;
@@ -664,28 +670,337 @@ footer #socials_section ul li {
 
 /* Tablet versjon */
 @media only screen and (min-width: 760px) {
-  .grid-container {
+  /*.grid-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: repeat(auto, 3);
+  }
+
+  header {
+      grid-column: 2 / 3;
+      grid-row: 1 / 2;
+  }
+
+  #bredcrum_list {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+      margin: 0;
+  }
+
+  main {
+      grid-column: 2 / 3;
+      grid-row: 2 / 3;
+      max-width: calc(100vw - 2rem);
+  }
+
+  footer {
+      grid-column: 1 / 3;
+      grid-row: 3 / 4;
+  }*/
+}
+/* Laptop versjon */
+@media only screen and (min-width: 1000px) {
+  /*.grid-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: repeat(auto, 3);
+  }
+
+  header {
+      grid-column: 2 / 3;
+      grid-row: 1 / 2;
+  }
+
+  #bredcrum_list {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+      margin: 0;
+  }
+
+  main {
+      grid-column: 2 / 3;
+      grid-row: 2 / 3;
+      max-width: calc(100vw - 2rem);
+  }
+
+  footer {
+      grid-column: 1 / 3;
+      grid-row: 3 / 4;
+  }*/
+}
+/* Desktop versjon */
+@media only screen and (min-width: 1800px) {
+  #grid-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: repeat(auto, 3);
+    grid-template-columns: 1fr 9fr 1fr;
+    grid-template-rows: repeat(3, auto);
+    max-width: 100vw;
   }
   header {
     grid-column: 2/3;
     grid-row: 1/2;
+    font-size: 1rem;
   }
-  #bredcrum_list {
-    grid-column: 1/2;
-    grid-row: 1/2;
-    margin: 0;
+  header nav {
+    margin-bottom: 4rem;
+  }
+  header nav a:hover {
+    text-decoration: underline;
+  }
+  header nav #logo:hover {
+    text-decoration: none;
+  }
+  header nav #nav_icons {
+    font-size: 1.2rem;
+  }
+  header nav #nav_icons a i:hover {
+    font-size: 1.5rem;
+  }
+  nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 3rem;
+  }
+  nav .nav_ul_flex {
+    flex-direction: row;
+    gap: 2rem;
+  }
+  nav .search_field_border {
+    width: 16%;
   }
   main {
     grid-column: 2/3;
     grid-row: 2/3;
-    max-width: calc(100vw - 2rem);
   }
-  footer {
+  #arrows {
+    width: 1530.37px;
+    height: 494.433px;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #arrows i {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 1rem;
+    margin: 0.5rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    z-index: 999;
+  }
+  #banner_frame {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    width: 100%;
+    overflow-x: scroll;
+    position: relative;
+    border-radius: 2rem;
+    min-height: 500px;
+    margin-bottom: 6rem;
+  }
+  #banner {
+    background-image: url("https://picsum.photos/1600/600");
+    min-width: 94%;
+    margin: 0;
+  }
+  #banner h2 {
+    margin-top: 4rem;
+    width: 35%;
+    font-size: 2.5rem;
+  }
+  #banner p {
+    width: 40%;
+  }
+  #banner a {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 3rem;
+  }
+  #banner2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    margin: 1rem 0;
+    padding: 3rem;
+    border-radius: 2rem;
+    background-image: url("https://picsum.photos/1600/600");
+    background-color: rgba(255, 255, 255, 0.2);
+    background-blend-mode: lighten;
+    min-width: 94%;
+    margin: 0;
+  }
+  #banner2 h2 {
+    width: 35%;
+    font-size: 2.5rem;
+    margin: 0;
+    margin-top: 4rem;
+    padding: 1rem 0;
+  }
+  #banner2 p {
+    width: 40%;
+  }
+  #banner2 a {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+    background-color: black;
+    text-decoration: none;
+    border-radius: 1.5rem;
+    padding: 1rem;
+    margin-bottom: 3rem;
+  }
+  #banner3 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    margin: 1rem 0;
+    padding: 3rem;
+    border-radius: 2rem;
+    background-image: url("https://picsum.photos/1600/600");
+    background-color: rgba(255, 255, 255, 0.2);
+    background-blend-mode: lighten;
+    min-width: 94%;
+    margin: 0;
+    color: white;
+  }
+  #banner3 h2 {
+    width: 35%;
+    font-size: 2.5rem;
+    margin: 0;
+    margin-top: 4rem;
+    padding: 1rem 0;
+  }
+  #banner3 p {
+    width: 40%;
+  }
+  #banner3 a {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: black;
+    background-color: white;
+    text-decoration: none;
+    border-radius: 1.5rem;
+    padding: 1rem;
+    margin-bottom: 3rem;
+  }
+  .centered_h {
+    font-size: 2.8rem;
+    margin: 2rem;
+  }
+  #popular_products p {
+    font-size: 1.1rem;
+  }
+  #popular_products #product_buttons li a {
+    font-size: 1.1rem;
+    padding: 1rem 2rem;
+  }
+  #popular_products article {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 6rem;
+  }
+  #popular_products article .product_card {
+    max-width: 32.5%;
+  }
+  #popular_products article .product_card i {
+    font-size: 1.4rem;
+    font-weight: 1px;
+    margin: 0.8rem;
+    padding: 0.7rem;
+    background-color: rgba(218, 218, 218, 0.7);
+  }
+  #popular_products article .product_card i:hover {
+    background-color: rgba(255, 123, 123, 0.7);
+  }
+  #popular_products article .product_card .product_name_price a {
+    font-size: 1.3rem;
+  }
+  #popular_products article .product_card .product_name_price p {
+    font-size: 1rem;
+  }
+  #popular_products article .product_card .reviews i {
+    font-size: 1rem;
+  }
+  #popular_products article .product_card .reviews i:hover {
+    background-color: rgba(255, 255, 255, 0);
+  }
+  #popular_categories p {
+    font-size: 1.1rem;
+  }
+  #popular_categories #category_section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 0.5fr 1fr;
+  }
+  #popular_categories #category_section .category_container {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  #popular_categories #category_section .category_container2 {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+  #popular_categories #category_section .category_container3 {
+    grid-column: 3/4;
+    grid-row: 1/3;
+  }
+  #popular_categories #category_section .category_container3 article {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100% - 2rem);
+  }
+  #popular_categories #category_section .category_container4 {
     grid-column: 1/3;
+    grid-row: 2/4;
+    background-image: url("https://picsum.photos/1100/600");
+  }
+  #popular_categories #category_section .category_container4 article {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100% - 2rem);
+    width: calc(100% - 2rem);
+  }
+  #popular_categories #category_section .category_container5 {
+    grid-column: 3/4;
     grid-row: 3/4;
   }
-}
-/* Desktop versjon *//*# sourceMappingURL=main.css.map */
+  #popular_categories #category_section .category_container article h4, #popular_categories #category_section .category_container2 article h4, #popular_categories #category_section .category_container5 article h4 {
+    margin: 10rem 0;
+  }
+  #popular_categories #category_section .category_container article h4, #popular_categories #category_section .category_container2 article h4, #popular_categories #category_section .category_container3 article h4, #popular_categories #category_section .category_container4 article h4, #popular_categories #category_section .category_container5 article h4 {
+    font-size: 1.5rem;
+  }
+  #reviews #review_scroll .review_cards {
+    min-width: 23%;
+  }
+  footer {
+    grid-column: 2/3;
+    grid-row: 3/4;
+  }
+  footer p, footer a {
+    font-size: 0.9rem;
+  }
+  footer span {
+    font-size: 1rem;
+  }
+  footer #logo_section {
+    width: 100%;
+  }
+  footer #shortcut_section ul li a {
+    font-size: 0.9rem;
+  }
+  footer i {
+    font-size: 1.1rem;
+  }
+}/*# sourceMappingURL=main.css.map */

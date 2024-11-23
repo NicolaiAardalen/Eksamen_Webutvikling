@@ -22,7 +22,7 @@
             <ul class="nav_ul_flex">
                 <li><a href="index.html">Hjem</a></li>
                 <li><a href="index.html">Produkter</a></li>
-                <li><a href="index.html"><p id="logo">Logo</p></a></li>
+                <li><a id="logo" href="index.html"><p>Logo</p></a></li>
                 <li><a href="index.html">Kategorier</a></li>
                 <li><a href="index.html">Kontakt oss</a></li>
             </ul>
@@ -32,14 +32,13 @@
                 <a href="checkout.html"><i class="fa-solid fa-cart-shopping"></i></a>
             </section>
         </nav>
-        
     </header>
     <ul id="bredcrum_list">
         <li><a href="index.html">Hjem</a></li>
         <li><i class="fa-solid fa-angle-right"></i></li>
         <li><a href="index.html#popular_categories">Kategori</a></li>
         <li><i class="fa-solid fa-angle-right"></i></li>
-        <li><a id="bold" href="product.html">Produktnavn</a></li>
+        <li><a class="bold" href="product.html">Produktnavn</a></li>
     </ul>
     <main>
         <section id="add_product">
@@ -52,7 +51,7 @@
             <p class="product_name">Produktnavn</p>
             <p id="brand_name">Merkenavn</p>
             <p>5 195 kr inkl. mva.</p>
-            <p>Farge: <span id="bold">beige</span></p>
+            <p>Farge: <span class="bold">beige</span></p>
             <form id="choose_size">
                 <select> <!--https://blog.logrocket.com/creating-custom-select-dropdown-css/-->
                     <option selected>Velg størrelse</option>
@@ -69,7 +68,7 @@
         <section id="product_info">
             <details> <!--https://www.w3schools.com/tags/tag_details.asp--> <!--https://www.sitepoint.com/style-html-details-element/-->
                 <summary>
-                    <p>Materiale og vedlikehold</p>
+                    <h3>Materiale og vedlikehold</h3>
                     <i class="fa-solid fa-plus"></i>
                 </summary>
                 <ul>
@@ -80,14 +79,14 @@
               </details>
               <details> <!--https://www.w3schools.com/tags/tag_details.asp--> <!--https://www.sitepoint.com/style-html-details-element/-->
                 <summary>
-                    <p>Produktdealjer</p>
+                    <h3>Produktdealjer</h3>
                     <i class="fa-solid fa-plus"></i>
                 </summary>
                 <p lang="en">Epcot is a theme park at Walt Disney World Resort featuring exciting attractions. international pavilions, award-winning fireworks and seasonal special events</p>
               </details>
               <details> <!--https://www.w3schools.com/tags/tag_details.asp--> <!--https://www.sitepoint.com/style-html-details-element/-->
                 <summary>
-                    <p>Størrelsestabell</p>
+                    <h3>Størrelsestabell</h3>
                     <i class="fa-solid fa-plus"></i>
                 </summary>
                 <p>Sjekk hvordan din vanlige størrelse konverterer til andre størrelser i vår størrelsesguide. Husk at 
@@ -211,15 +210,15 @@
         <section id="product_review_frame">
             <details>
                 <summary>
-                    <p id="bold">Anmeldeser</p>
-                    <section>
+                    <h3 class="bold">Anmeldeser</h3>
+                    <span>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-regular fa-star"></i>
-                        <p>32</p>
-                    </section>
+                        32
+                    </span>
                 </summary>
                 <section id="product_review">
                     <p>Rober Labrodor</p>
