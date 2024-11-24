@@ -12,7 +12,7 @@
     <title>Produktside</title>
 </head>
 <body>
-    <div class="grid-container">
+    <div id="grid-container">
     <header>
         <nav>
             <form class="search_field_border">
@@ -21,10 +21,10 @@
             </form>
             <ul class="nav_ul_flex">
                 <li><a href="index.html">Hjem</a></li>
-                <li><a href="index.html">Produkter</a></li>
+                <li><a href="index.html#popular_products">Produkter</a></li>
                 <li><a id="logo" href="index.html"><p>Logo</p></a></li>
-                <li><a href="index.html">Kategorier</a></li>
-                <li><a href="index.html">Kontakt oss</a></li>
+                <li><a href="index.html#popular_categories">Kategorier</a></li>
+                <li><a href="product.html#contact_section">Kontakt oss</a></li>
             </ul>
             <section id="nav_icons">
                 <i class="fa-regular fa-user"></i>
@@ -33,14 +33,14 @@
             </section>
         </nav>
     </header>
-    <ul id="bredcrum_list">
-        <li><a href="index.html">Hjem</a></li>
-        <li><i class="fa-solid fa-angle-right"></i></li>
-        <li><a href="index.html#popular_categories">Kategori</a></li>
-        <li><i class="fa-solid fa-angle-right"></i></li>
-        <li><a class="bold" href="product.html">Produktnavn</a></li>
-    </ul>
     <main>
+        <ul id="bredcrum_list">
+            <li><a href="index.html">Hjem</a></li>
+            <li><i class="fa-solid fa-angle-right"></i></li>
+            <li><a href="index.html#popular_categories">Kategori</a></li>
+            <li><i class="fa-solid fa-angle-right"></i></li>
+            <li><a class="bold" href="product.html">Produktnavn</a></li>
+        </ul>
         <section id="add_product">
             <section id="product_img_grid">
                 <img id="product_img1" src="https://picsum.photos/135" alt="Et tilfeldig lorem picsum bilde">
@@ -48,196 +48,302 @@
                 <img id="product_img3" src="https://picsum.photos/135" alt="Et tilfeldig lorem picsum bilde">
                 <img id="product_img4" src="https://picsum.photos/450/910" alt="Et tilfeldig lorem picsum bilde">
             </section>
-            <p class="product_name">Produktnavn</p>
-            <p id="brand_name">Merkenavn</p>
-            <p>5 195 kr inkl. mva.</p>
-            <p>Farge: <span class="bold">beige</span></p>
-            <form id="choose_size">
-                <select> <!--https://blog.logrocket.com/creating-custom-select-dropdown-css/-->
-                    <option selected>Velg størrelse</option>
-                    <option>XS</option>
-                    <option>S</option>
-                    <option>M</option>
-                    <option>L</option>
-                    <option>XL</option>
-                </select>
-                <input type="submit" value="Legg i handlekurv">
-                <i class="fa-regular fa-heart"></i>
-            </form>
-        </section>
-        <section id="product_info">
-            <details> <!--https://www.w3schools.com/tags/tag_details.asp--> <!--https://www.sitepoint.com/style-html-details-element/-->
-                <summary>
-                    <h3>Materiale og vedlikehold</h3>
-                    <i class="fa-solid fa-plus"></i>
-                </summary>
-                <ul>
-                    <li>Overmateriale: 95% viskose, 5% elastan</li>
-                    <li>Materiale ermer: 100% polyster</li>
-                    <li>Materiale: Jersey</li>
-                </ul>
-              </details>
-              <details> <!--https://www.w3schools.com/tags/tag_details.asp--> <!--https://www.sitepoint.com/style-html-details-element/-->
-                <summary>
-                    <h3>Produktdealjer</h3>
-                    <i class="fa-solid fa-plus"></i>
-                </summary>
-                <p lang="en">Epcot is a theme park at Walt Disney World Resort featuring exciting attractions. international pavilions, award-winning fireworks and seasonal special events</p>
-              </details>
-              <details> <!--https://www.w3schools.com/tags/tag_details.asp--> <!--https://www.sitepoint.com/style-html-details-element/-->
-                <summary>
-                    <h3>Størrelsestabell</h3>
-                    <i class="fa-solid fa-plus"></i>
-                </summary>
-                <p>Sjekk hvordan din vanlige størrelse konverterer til andre størrelser i vår størrelsesguide. Husk at 
-                    dette kun er en generell guide og at størrelsene kan variere i forhold til merke og modell.</p>
-                <table>
-                    <tr>
-                        <th>eu</th>
-                        <th>int</th>
-                        <th>Brystvidde</th>
-                        <th>Livvidde</th>
-                        <th>Hoftemål</th>
-                    </tr>
-                    <tr>
-                        <td>32</td>
-                        <td>xxs</td>
-                        <td>76</td>
-                        <td>63</td>
-                        <td>85</td>
-                    </tr>
-                    <tr>
-                        <td>34</td>
-                        <td>xs</td>
-                        <td>80</td>
-                        <td>66</td>
-                        <td>89</td>
-                    </tr>
-                    <tr>
-                        <td>36</td>
-                        <td>s</td>
-                        <td>84</td>
-                        <td>69</td>
-                        <td>93</td>
-                    </tr>
-                    <tr>
-                        <td>38</td>
-                        <td>m</td>
-                        <td>88</td>
-                        <td>72</td>
-                        <td>97</td>
-                    </tr>
-                    <tr>
-                        <td>40</td>
-                        <td>l</td>
-                        <td>92</td>
-                        <td>76</td>
-                        <td>100</td>
-                    </tr>
-                    <tr>
-                        <td>42</td>
-                        <td>xl</td>
-                        <td>96</td>
-                        <td>80</td>
-                        <td>103</td>
-                    </tr>
-                    <tr>
-                        <td>44</td>
-                        <td>xxl</td>
-                        <td>100</td>
-                        <td>85</td>
-                        <td>106</td>
-                    </tr>
-                    <tr>
-                        <td>46</td>
-                        <td>3xl</td>
-                        <td>104</td>
-                        <td>90</td>
-                        <td>109</td>
-                    </tr>
-                    <tr>
-                        <td>48</td>
-                        <td>4xl</td>
-                        <td>110</td>
-                        <td>96.5</td>
-                        <td>114</td>
-                    </tr>
-                    <tr>
-                        <td>50</td>
-                        <td>5xl</td>
-                        <td>116</td>
-                        <td>103</td>
-                        <td>119</td>
-                    </tr>
-                    <tr>
-                        <td>52</td>
-                        <td>6xl</td>
-                        <td>122</td>
-                        <td>109.5</td>
-                        <td>124</td>
-                    </tr>
-                    <tr>
-                        <td>54</td>
-                        <td>7xl</td>
-                        <td>128</td>
-                        <td>116</td>
-                        <td>130</td>
-                    </tr>
-                    <tr>
-                        <td>56</td>
-                        <td>8xl</td>
-                        <td>134</td>
-                        <td>122.5</td>
-                        <td>136</td>
-                    </tr>
-                    <tr>
-                        <td>58</td>
-                        <td>9xl</td>
-                        <td>140</td>
-                        <td>129</td>
-                        <td>142</td>
-                    </tr>
-                    <tr>
-                        <td>60</td>
-                        <td>10xl</td>
-                        <td>146</td>
-                        <td>135.5</td>
-                        <td>148</td>
-                    </tr>
-                </table>
-            </details>
-        </section>
-        <section id="product_review_frame">
-            <details>
-                <summary>
-                    <h3 class="bold">Anmeldeser</h3>
-                    <span>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-regular fa-star"></i>
-                        32
-                    </span>
-                </summary>
-                <section id="product_review">
-                    <p>Rober Labrodor</p>
-                    <p>2024-10-02</p>
-                    <section>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-regular fa-star"></i>
-                        <i class="fa-regular fa-star"></i>
-                    </section>
-                    <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus quod.</p>
+            <div id="product_scroll">
+                <section id="purchase_info">
+                    <p class="product_name">Produktnavn</p>
+                    <p id="brand_name">Merkenavn</p>
+                    <p>5 195 kr inkl. mva.</p>
+                    <p>Farge: <span class="bold">beige</span></p>
                 </section>
-            </details>
+                <form id="choose_size">
+                    <select> <!--https://blog.logrocket.com/creating-custom-select-dropdown-css/-->
+                        <option selected>Velg størrelse</option>
+                        <option>XS</option>
+                        <option>S</option>
+                        <option>M</option>
+                        <option>L</option>
+                        <option>XL</option>
+                    </select>
+                    <input type="submit" value="Legg i handlekurv">
+                    <i class="fa-regular fa-heart"></i>
+                </form>
+                <section id="product_info">
+                    <details> <!--https://www.w3schools.com/tags/tag_details.asp--> <!--https://www.sitepoint.com/style-html-details-element/-->
+                        <summary>
+                            <h3>Materiale og vedlikehold</h3>
+                            <i class="fa-solid fa-plus"></i>
+                        </summary>
+                        <ul>
+                            <li>Overmateriale: 95% viskose, 5% elastan</li>
+                            <li>Materiale ermer: 100% polyster</li>
+                            <li>Materiale: Jersey</li>
+                        </ul>
+                    </details>
+                    <details> <!--https://www.w3schools.com/tags/tag_details.asp--> <!--https://www.sitepoint.com/style-html-details-element/-->
+                        <summary>
+                            <h3>Produktdealjer</h3>
+                            <i class="fa-solid fa-plus"></i>
+                        </summary>
+                        <p lang="en">Epcot is a theme park at Walt Disney World Resort featuring exciting attractions. international pavilions, award-winning fireworks and seasonal special events</p>
+                    </details>
+                    <details> <!--https://www.w3schools.com/tags/tag_details.asp--> <!--https://www.sitepoint.com/style-html-details-element/-->
+                        <summary>
+                            <h3>Størrelsestabell</h3>
+                            <i class="fa-solid fa-plus"></i>
+                        </summary>
+                        <p>Sjekk hvordan din vanlige størrelse konverterer til andre størrelser i vår størrelsesguide. Husk at 
+                            dette kun er en generell guide og at størrelsene kan variere i forhold til merke og modell.</p>
+                        <table>
+                            <tr>
+                                <th>eu</th>
+                                <th>int</th>
+                                <th>Brystvidde</th>
+                                <th>Livvidde</th>
+                                <th>Hoftemål</th>
+                            </tr>
+                            <tr>
+                                <td>32</td>
+                                <td>xxs</td>
+                                <td>76</td>
+                                <td>63</td>
+                                <td>85</td>
+                            </tr>
+                            <tr>
+                                <td>34</td>
+                                <td>xs</td>
+                                <td>80</td>
+                                <td>66</td>
+                                <td>89</td>
+                            </tr>
+                            <tr>
+                                <td>36</td>
+                                <td>s</td>
+                                <td>84</td>
+                                <td>69</td>
+                                <td>93</td>
+                            </tr>
+                            <tr>
+                                <td>38</td>
+                                <td>m</td>
+                                <td>88</td>
+                                <td>72</td>
+                                <td>97</td>
+                            </tr>
+                            <tr>
+                                <td>40</td>
+                                <td>l</td>
+                                <td>92</td>
+                                <td>76</td>
+                                <td>100</td>
+                            </tr>
+                            <tr>
+                                <td>42</td>
+                                <td>xl</td>
+                                <td>96</td>
+                                <td>80</td>
+                                <td>103</td>
+                            </tr>
+                            <tr>
+                                <td>44</td>
+                                <td>xxl</td>
+                                <td>100</td>
+                                <td>85</td>
+                                <td>106</td>
+                            </tr>
+                            <tr>
+                                <td>46</td>
+                                <td>3xl</td>
+                                <td>104</td>
+                                <td>90</td>
+                                <td>109</td>
+                            </tr>
+                            <tr>
+                                <td>48</td>
+                                <td>4xl</td>
+                                <td>110</td>
+                                <td>96.5</td>
+                                <td>114</td>
+                            </tr>
+                            <tr>
+                                <td>50</td>
+                                <td>5xl</td>
+                                <td>116</td>
+                                <td>103</td>
+                                <td>119</td>
+                            </tr>
+                            <tr>
+                                <td>52</td>
+                                <td>6xl</td>
+                                <td>122</td>
+                                <td>109.5</td>
+                                <td>124</td>
+                            </tr>
+                            <tr>
+                                <td>54</td>
+                                <td>7xl</td>
+                                <td>128</td>
+                                <td>116</td>
+                                <td>130</td>
+                            </tr>
+                            <tr>
+                                <td>56</td>
+                                <td>8xl</td>
+                                <td>134</td>
+                                <td>122.5</td>
+                                <td>136</td>
+                            </tr>
+                            <tr>
+                                <td>58</td>
+                                <td>9xl</td>
+                                <td>140</td>
+                                <td>129</td>
+                                <td>142</td>
+                            </tr>
+                            <tr>
+                                <td>60</td>
+                                <td>10xl</td>
+                                <td>146</td>
+                                <td>135.5</td>
+                                <td>148</td>
+                            </tr>
+                        </table>
+                    </details>
+                </section>
+                <section id="product_review_frame">
+                    <details>
+                        <summary>
+                            <h3 class="bold">Anmeldeser</h3>
+                            <span>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                32
+                            </span>
+                        </summary>
+                        <section id="product_review">
+                            <p>Rober Labrodor</p>
+                            <p>2024-10-02</p>
+                            <section>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </section>
+                            <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus quod.</p>
+                        </section>
+                    </details>
+                </section>
+            </div>
         </section>
         <section id="similar_products">
             <h2>Lignende produkter</h2>
             <a href="index.html#popular_products">Se flere lignende produkter <i class="fa-solid fa-arrow-right"></i></a>
             <section id="scroll_section">
+                <section class="product">
+                    <section class="product_image">
+                        <i class="fa-regular fa-heart"></i>
+                    </section>
+                    <section class="product_name_and_price">
+                        <p class="product_name">Product name</p>
+                        <p>Kr 1999</p>
+                    </section>
+                    <section class="product_score">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <p class="bold">842 Reviews</p>
+                    </section>
+                </section>
+                <section class="product">
+                    <section class="product_image">
+                        <i class="fa-regular fa-heart"></i>
+                    </section>
+                    <section class="product_name_and_price">
+                        <p class="product_name">Product name</p>
+                        <p>Kr 1999</p>
+                    </section>
+                    <section class="product_score">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <p class="bold">842 Reviews</p>
+                    </section>
+                </section>
+                <section class="product">
+                    <section class="product_image">
+                        <i class="fa-regular fa-heart"></i>
+                    </section>
+                    <section class="product_name_and_price">
+                        <p class="product_name">Product name</p>
+                        <p>Kr 1999</p>
+                    </section>
+                    <section class="product_score">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <p class="bold">842 Reviews</p>
+                    </section>
+                </section>
+                <section class="product">
+                    <section class="product_image">
+                        <i class="fa-regular fa-heart"></i>
+                    </section>
+                    <section class="product_name_and_price">
+                        <p class="product_name">Product name</p>
+                        <p>Kr 1999</p>
+                    </section>
+                    <section class="product_score">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <p class="bold">842 Reviews</p>
+                    </section>
+                </section>
+                <section class="product">
+                    <section class="product_image">
+                        <i class="fa-regular fa-heart"></i>
+                    </section>
+                    <section class="product_name_and_price">
+                        <p class="product_name">Product name</p>
+                        <p>Kr 1999</p>
+                    </section>
+                    <section class="product_score">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <p class="bold">842 Reviews</p>
+                    </section>
+                </section>
+                <section class="product">
+                    <section class="product_image">
+                        <i class="fa-regular fa-heart"></i>
+                    </section>
+                    <section class="product_name_and_price">
+                        <p class="product_name">Product name</p>
+                        <p>Kr 1999</p>
+                    </section>
+                    <section class="product_score">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <p class="bold">842 Reviews</p>
+                    </section>
+                </section>
                 <section class="product">
                     <section class="product_image">
                         <i class="fa-regular fa-heart"></i>

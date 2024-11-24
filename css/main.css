@@ -254,7 +254,7 @@ nav #nav_icons a {
 #reviews #review_scroll {
   display: flex;
   gap: 1rem;
-  overflow: scroll;
+  overflow-x: scroll;
   position: relative;
   max-width: calc(100vw - 2rem);
 }
@@ -338,6 +338,8 @@ nav #nav_icons a {
 }
 .checkout_frame .personal_information label {
   font-weight: bold;
+  display: flex;
+  flex-direction: column;
 }
 .checkout_frame #save_info {
   width: 100%;
@@ -439,7 +441,7 @@ nav #nav_icons a {
 }
 #add_product #product_img_grid {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: auto 2fr;
   grid-template-rows: repeat(auto, 3);
   gap: 1rem;
 }
@@ -558,7 +560,7 @@ nav #nav_icons a {
 #similar_products #scroll_section {
   display: flex;
   flex-direction: row;
-  overflow: scroll;
+  overflow-x: scroll;
   gap: 1rem;
 }
 #similar_products #scroll_section .product {
@@ -730,6 +732,9 @@ footer #socials_section ul li {
 }
 /* Desktop versjon */
 @media only screen and (min-width: 1800px) {
+  .uppercase {
+    text-transform: uppercase;
+  }
   #grid-container {
     display: grid;
     grid-template-columns: 1fr 9fr 1fr;
@@ -983,6 +988,138 @@ footer #socials_section ul li {
   }
   #reviews #review_scroll .review_cards {
     min-width: 23%;
+  }
+  .checkout_frame {
+    padding: 3rem 20rem;
+  }
+  .checkout_frame h2 {
+    text-transform: uppercase;
+  }
+  .checkout_frame .full_item {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .checkout_frame .full_item .item_description {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding: 0 1rem;
+  }
+  .checkout_frame .full_item .item_description form {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  .checkout_frame .full_item section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 1rem;
+    width: 100%;
+  }
+  .checkout_frame #PI_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, auto);
+    gap: 0.5rem;
+  }
+  .checkout_frame #PI_grid #street_adress {
+    grid-column: 1/3;
+  }
+  .checkout_frame .personal_information {
+    display: flex;
+    flex-direction: column;
+  }
+  .deliveriy_frame {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, auto);
+  }
+  .deliveriy_frame label {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  .deliveriy_frame .gray {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  .deliveriy_frame .flex-icon {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.25rem;
+    margin: 0 !important;
+  }
+  .deliveriy_frame .delivery_info {
+    grid-column: 1/3;
+    grid-row: 3/4;
+  }
+  #payment_form {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, auto);
+    gap: 0.5rem;
+  }
+  #payment_form h3 {
+    grid-column: 1/3;
+    grid-row: 1/2;
+  }
+  #payment_form label {
+    display: flex;
+    flex-direction: column;
+  }
+  #payment_form #card_num {
+    grid-column: 1/3;
+  }
+  #bredcrum_list {
+    font-size: 1rem;
+  }
+  #add_product {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+  }
+  #add_product #product_img_grid #product_img1, #add_product #product_img_grid #product_img2, #add_product #product_img_grid #product_img3 {
+    width: 220px;
+  }
+  #add_product #product_img_grid #product_img4 {
+    min-height: 100%;
+  }
+  #add_product #product_scroll {
+    padding: 0 1rem;
+    max-height: 682.483px;
+    overflow-y: scroll;
+  }
+  #add_product #product_scroll #purchase_info {
+    margin-bottom: 3rem;
+  }
+  #add_product #product_scroll #choose_size input:hover {
+    background-color: gray;
+    cursor: pointer;
+  }
+  #add_product #product_scroll #choose_size i {
+    font-size: 1.2rem;
+    padding: 0.9rem;
+  }
+  #add_product #product_scroll #choose_size i:hover {
+    color: red;
+  }
+  #similar_products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  #similar_products h2, #similar_products a {
+    margin: 3rem 0 1rem 0;
+  }
+  #similar_products #scroll_section {
+    max-width: 1540px;
+  }
+  #similar_products #scroll_section .product .product_image i:hover {
+    background-color: rgba(255, 123, 123, 0.7);
   }
   footer {
     grid-column: 2/3;
