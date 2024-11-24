@@ -222,9 +222,10 @@ nav #nav_icons a {
 }
 #popular_categories #category_section {
   margin: 3.5rem 0 2rem 0;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
   gap: 1rem;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1.2fr 1.2fr 2fr 1.2fr 1.2fr;
 }
 #popular_categories #category_section .category_container, #popular_categories #category_section .category_container2, #popular_categories #category_section .category_container3, #popular_categories #category_section .category_container4, #popular_categories #category_section .category_container5 {
   width: 100%;
@@ -237,6 +238,10 @@ nav #nav_icons a {
   padding: 1rem;
   -webkit-backdrop-filter: blur(3px);
           backdrop-filter: blur(3px); /* https://developer.mozilla.org/en-US/docs/Web/CSS/backdrop-filter */
+  height: calc(100% - 2rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 #popular_categories #category_section .category_container article h4, #popular_categories #category_section .category_container2 article h4, #popular_categories #category_section .category_container3 article h4, #popular_categories #category_section .category_container4 article h4, #popular_categories #category_section .category_container5 article h4 {
   text-transform: uppercase; /* https://developer.mozilla.org/en-US/docs/Web/CSS/text-transform */
@@ -266,6 +271,7 @@ nav #nav_icons a {
 }
 #reviews #review_scroll .review_cards img {
   border-radius: 5rem;
+  max-width: 150px;
 }
 #reviews #review_scroll .review_cards .review_name {
   font-weight: bold;
@@ -393,6 +399,10 @@ nav #nav_icons a {
 .checkout_frame #payment_form h3 {
   margin: 1rem 0 0.5rem 0;
 }
+.checkout_frame #payment_form label {
+  display: flex;
+  flex-direction: column;
+}
 .checkout_frame #payment_form input {
   padding: 0.75rem;
   margin: 0.2rem 0 0.5rem 0;
@@ -506,7 +516,6 @@ nav #nav_icons a {
 
 #product_info {
   font-size: 0.85rem;
-  border-bottom: solid black 1px;
 }
 #product_info details {
   padding: 1rem;
@@ -521,31 +530,6 @@ nav #nav_icons a {
 }
 #product_info details table {
   text-transform: uppercase;
-}
-
-#product_review_frame details {
-  padding: 1rem;
-  font-size: 0.85rem;
-}
-#product_review_frame details summary {
-  display: flex;
-  justify-content: space-between;
-  text-align: center;
-}
-#product_review_frame details summary span {
-  display: flex;
-  align-items: center;
-  gap: 0;
-}
-#product_review_frame details #product_review {
-  padding: 1rem;
-  border: solid rgb(231, 231, 231) 1px;
-  border-radius: 2rem;
-}
-#product_review_frame details #product_review section {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
 }
 
 #similar_products {
@@ -591,6 +575,10 @@ nav #nav_icons a {
   font-size: 1.25rem;
   font-weight: bold;
   margin: 1rem 0 0 0;
+  color: black;
+}
+#similar_products #scroll_section .product .product_name_and_price .product_name:hover {
+  font-size: 1.4rem;
 }
 #similar_products #scroll_section .product .product_name_and_price p {
   margin: 0;
@@ -669,77 +657,69 @@ footer #socials_section ul {
 footer #socials_section ul li {
   list-style: none;
 }
+footer #socials_section ul li #instagram {
+  color: purple;
+}
+footer #socials_section ul li #facebook {
+  color: rgb(24, 119, 242); /* https://www.brandcolorcode.com/facebook */
+}
+footer #socials_section ul li #linkedin {
+  color: rgb(0, 119, 181); /* https://www.brandcolorcode.com/linkedin */
+}
+footer #socials_section ul li #pinterest {
+  color: rgb(230, 0, 35); /* https://usbrandcolors.com/pinterest-colors/ */
+}
 
 /* Tablet versjon */
 @media only screen and (min-width: 760px) {
-  /*.grid-container {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-template-rows: repeat(auto, 3);
+  #popular_categories p {
+    font-size: 1.1rem;
   }
-
-  header {
-      grid-column: 2 / 3;
-      grid-row: 1 / 2;
+  #popular_categories #category_section {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
   }
-
-  #bredcrum_list {
-      grid-column: 1 / 2;
-      grid-row: 1 / 2;
-      margin: 0;
+  #popular_categories #category_section .category_container {
+    grid-column: 1/2;
+    grid-row: 1/3;
   }
-
-  main {
-      grid-column: 2 / 3;
-      grid-row: 2 / 3;
-      max-width: calc(100vw - 2rem);
+  #popular_categories #category_section .category_container2 {
+    grid-column: 2/4;
+    grid-row: 1/2;
   }
-
-  footer {
-      grid-column: 1 / 3;
-      grid-row: 3 / 4;
-  }*/
-}
-/* Laptop versjon */
-@media only screen and (min-width: 1000px) {
-  /*.grid-container {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-template-rows: repeat(auto, 3);
+  #popular_categories #category_section .category_container3 {
+    grid-column: 2/3;
+    grid-row: 2/3;
   }
-
-  header {
-      grid-column: 2 / 3;
-      grid-row: 1 / 2;
+  #popular_categories #category_section .category_container4 {
+    grid-column: 3/4;
+    grid-row: 2/3;
   }
-
-  #bredcrum_list {
-      grid-column: 1 / 2;
-      grid-row: 1 / 2;
-      margin: 0;
+  #popular_categories #category_section .category_container5 {
+    grid-column: 1/4;
+    grid-row: 3/4;
   }
-
-  main {
-      grid-column: 2 / 3;
-      grid-row: 2 / 3;
-      max-width: calc(100vw - 2rem);
+  #popular_categories #category_section .category_container article h4, #popular_categories #category_section .category_container2 article h4, #popular_categories #category_section .category_container5 article h4 {
+    margin: 8rem 0;
   }
-
-  footer {
-      grid-column: 1 / 3;
-      grid-row: 3 / 4;
-  }*/
+  #popular_categories #category_section .category_container article h4, #popular_categories #category_section .category_container2 article h4, #popular_categories #category_section .category_container3 article h4, #popular_categories #category_section .category_container4 article h4, #popular_categories #category_section .category_container5 article h4 {
+    font-size: 1.5rem;
+  }
 }
 /* Desktop versjon */
-@media only screen and (min-width: 1800px) {
+@media only screen and (min-width: 1200px) {
+  body {
+    display: flex;
+    justify-content: center;
+  }
   .uppercase {
     text-transform: uppercase;
   }
   #grid-container {
     display: grid;
     grid-template-columns: 1fr 9fr 1fr;
-    grid-template-rows: repeat(3, auto);
-    max-width: 100vw;
+    grid-template-rows: repeat(4, auto);
+    max-width: 1200px;
   }
   header {
     grid-column: 2/3;
@@ -773,6 +753,9 @@ footer #socials_section ul li {
   }
   nav .search_field_border {
     width: 16%;
+  }
+  #back:hover {
+    font-size: 1.2rem;
   }
   main {
     grid-column: 2/3;
@@ -929,6 +912,9 @@ footer #socials_section ul li {
   #popular_products article .product_card .product_name_price a {
     font-size: 1.3rem;
   }
+  #popular_products article .product_card .product_name_price a:hover {
+    font-size: 1.5rem;
+  }
   #popular_products article .product_card .product_name_price p {
     font-size: 1rem;
   }
@@ -942,7 +928,6 @@ footer #socials_section ul li {
     font-size: 1.1rem;
   }
   #popular_categories #category_section {
-    display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 0.5fr 1fr;
   }
@@ -958,23 +943,10 @@ footer #socials_section ul li {
     grid-column: 3/4;
     grid-row: 1/3;
   }
-  #popular_categories #category_section .category_container3 article {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: calc(100% - 2rem);
-  }
   #popular_categories #category_section .category_container4 {
     grid-column: 1/3;
     grid-row: 2/4;
     background-image: url("https://picsum.photos/1100/600");
-  }
-  #popular_categories #category_section .category_container4 article {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: calc(100% - 2rem);
-    width: calc(100% - 2rem);
   }
   #popular_categories #category_section .category_container5 {
     grid-column: 3/4;
@@ -1095,6 +1067,9 @@ footer #socials_section ul li {
   #add_product #product_scroll #purchase_info {
     margin-bottom: 3rem;
   }
+  #add_product #product_scroll #purchase_info #brand_name:hover {
+    font-size: 1.1rem;
+  }
   #add_product #product_scroll #choose_size input:hover {
     background-color: gray;
     cursor: pointer;
@@ -1107,23 +1082,33 @@ footer #socials_section ul li {
     color: red;
   }
   #similar_products {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-end;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, auto);
+    gap: 1rem;
   }
   #similar_products h2, #similar_products a {
-    margin: 3rem 0 1rem 0;
+    margin: 3rem 0 0 0;
+  }
+  #similar_products a {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 0.25rem;
   }
   #similar_products #scroll_section {
-    max-width: 1540px;
+    grid-column: 1/3;
   }
   #similar_products #scroll_section .product .product_image i:hover {
     background-color: rgba(255, 123, 123, 0.7);
   }
-  footer {
+  aside {
     grid-column: 2/3;
     grid-row: 3/4;
+  }
+  footer {
+    grid-column: 2/3;
+    grid-row: 4/5;
   }
   footer p, footer a {
     font-size: 0.9rem;
@@ -1137,7 +1122,13 @@ footer #socials_section ul li {
   footer #shortcut_section ul li a {
     font-size: 0.9rem;
   }
+  footer #shortcut_section ul li a:hover {
+    font-size: 1.2rem;
+  }
   footer i {
     font-size: 1.1rem;
+  }
+  footer i:hover {
+    font-size: 1.4rem;
   }
 }/*# sourceMappingURL=main.css.map */
