@@ -29,17 +29,45 @@
                 <section id="nav_icons">
                     <i class="fa-regular fa-user"></i>
                     <i class="fa-regular fa-heart"></i>
-                    <a href="checkout.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                    <a href="checkout.html" aria-label="handlevogn"><i class="fa-solid fa-cart-shopping"></i></a>
                 </section>
+                <a href="index.html" id="back"><i class="fa-solid fa-arrow-left"></i>Fortsett å handle</a>
             </nav>
-            <a href="index.html" id="back"><i class="fa-solid fa-arrow-left"></i>Fortsett å handle</a>
         </header>
         <main>
             <h1 class="centered_h">Kasse</h1>
             <section class="checkout_frame">
                 <h2>1. SHOPPINGBAGEN DIN</h2>
                 <section class="full_item">
-                    <img src="https://picsum.photos/150" alt="Et tilfeldig bilde fra Lorem Pixum">
+                    <img src="https://picsum.photos/150/190" alt="Et tilfeldig bilde fra Lorem Pixum">
+                    <section class="item_description">
+                        <article>
+                            <p class="bold">PRODUCT NAME</p>
+                            <p>Kr 1999</p>
+                            <p>Farge: beige</p>
+                        </article>
+                        <form>
+                            <label>Størrelse
+                                <select name="size"> <!--https://blog.logrocket.com/creating-custom-select-dropdown-css/-->
+                                    <option>XS</option>
+                                    <option selected>S</option>
+                                    <option>M</option>
+                                    <option>L</option>
+                                    <option>XL</option>
+                                </select>
+                            </label>
+                            <label>Antall
+                                <input type="number" name="number" value="1"> <!--https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/number-->
+                            </label>
+                        </form>
+                    </section>
+                    <section>
+                        <i class="fa-regular fa-heart"></i>
+                        <i class="fa-solid fa-trash"></i>
+                    </section>
+                </section>
+                <section class="full_item">
+                    <img src="https://picsum.photos/150/190" alt="Et tilfeldig bilde fra Lorem Pixum">
                     <section class="item_description">
                         <article>
                             <p class="bold">PRODUCT NAME</p>
@@ -69,7 +97,7 @@
                     </section>
                 </section>
                 <section class="full_item">
-                    <img src="https://picsum.photos/150" alt="Et tilfeldig bilde fra Lorem Pixum">
+                    <img src="https://picsum.photos/150/190" alt="Et tilfeldig bilde fra Lorem Pixum">
                     <section class="item_description">
                         <article>
                             <p class="bold">PRODUCT NAME</p>
@@ -99,37 +127,7 @@
                     </section>
                 </section>
                 <section class="full_item">
-                    <img src="https://picsum.photos/150" alt="Et tilfeldig bilde fra Lorem Pixum">
-                    <section class="item_description">
-                        <article>
-                            <p class="bold">PRODUCT NAME</p>
-                            <p>Kr 1999</p>
-                            <p>Farge: beige</p>
-                        </article>
-                        <form>
-                            <label>Størrelse
-                                <select name="size"> <!--https://blog.logrocket.com/creating-custom-select-dropdown-css/-->
-                                    <option>XS</option>
-                                    <option selected>S</option>
-                                    <option>M</option>
-                                    <option>L</option>
-                                    <option>XL</option>
-                                </select>
-                            </label>
-                            <label>Antall
-                                <input type="number" name="number" value="1"> <!--https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/number-->
-                            </label>
-                        </form>
-                        
-                        
-                    </section>
-                    <section>
-                        <i class="fa-regular fa-heart"></i>
-                        <i class="fa-solid fa-trash"></i>
-                    </section>
-                </section>
-                <section class="full_item">
-                    <img src="https://picsum.photos/150" alt="Et tilfeldig bilde fra Lorem Pixum">
+                    <img src="https://picsum.photos/150/190" alt="Et tilfeldig bilde fra Lorem Pixum">
                     <section class="item_description">
                         <article>
                             <p class="bold">PRODUCT NAME</p>
@@ -293,10 +291,10 @@
             <section id="socials_section">
                 <h4>SOSIALE MEDIER</h4>
                 <ul>
-                    <li><a id="instagram" href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
-                    <li><a id="facebook" href="http://facrbook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
-                    <li><a id="linkedin" href="https://www.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
-                    <li><a id="pinterest" href="https://no.pinterest.com/" target="_blank"><i class="fa-brands fa-pinterest"></i></a></i></li>
+                    <li><a id="instagram" href="https://www.instagram.com/" target="_blank" aria-label="link til instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a id="facebook" href="http://facrbook.com/" target="_blank" aria-label="link til facebook"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a id="linkedin" href="https://www.linkedin.com/" target="_blank" aria-label="link til linkedin"><i class="fa-brands fa-linkedin"></i></a></li>
+                    <li><a id="pinterest" href="https://no.pinterest.com/" target="_blank" aria-label="link til pinterest"><i class="fa-brands fa-pinterest"></i></a></li>
                 </ul>
             </section>
         </footer>

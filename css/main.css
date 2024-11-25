@@ -16,7 +16,7 @@ nav {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  margin: 0 0 1rem 0;
+  margin: 0 0 2rem 0;
 }
 nav .search_field_border {
   display: flex;
@@ -30,7 +30,7 @@ nav .search_field_border {
 }
 nav .search_field_border .search_field {
   border: none;
-  max-width: calc(100vw - 100%);
+  width: 100%;
 }
 nav .nav_ul_flex {
   display: flex;
@@ -71,6 +71,8 @@ nav #nav_icons a {
 
 #back {
   text-decoration: none;
+  width: 100%;
+  margin: 1rem 0;
 }
 #back i {
   padding: 0 1rem 0 0;
@@ -136,6 +138,7 @@ nav #nav_icons a {
 .centered_h {
   text-align: center;
   font-size: 2rem;
+  margin-top: 5rem;
 }
 
 #review_h3 {
@@ -307,11 +310,13 @@ nav #nav_icons a {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 1rem;
-  margin: 0 0 3rem 0;
+  gap: 5rem;
+  margin: 0 0 1rem 0;
 }
 .checkout_frame .full_item .item_description form label {
   font-size: 0.85rem;
+  display: flex;
+  flex-direction: column;
 }
 .checkout_frame .full_item .item_description form select {
   border: none;
@@ -324,8 +329,8 @@ nav #nav_icons a {
   font-size: 0.85rem;
   border: solid rgb(231, 231, 231) 1px;
 }
-.checkout_frame .full_item .item_description i {
-  margin: 0 0.75rem 0 0;
+.checkout_frame .full_item i {
+  margin: 0 0.75rem 1rem 0;
 }
 .checkout_frame .delivery_h3 {
   margin: 5rem 0 1rem 0;
@@ -378,7 +383,7 @@ nav #nav_icons a {
   font-weight: bold;
 }
 .checkout_frame .deliveriy_frame .gray {
-  color: gray;
+  color: rgb(75, 75, 75);
   font-weight: bold;
   margin: 0.4rem 0 0 0;
 }
@@ -408,6 +413,7 @@ nav #nav_icons a {
   margin: 0.2rem 0 0.5rem 0;
   border: solid rgb(233, 233, 233) 1px;
   font-size: 0.8rem;
+  width: calc(100% - 1.5rem);
 }
 .checkout_frame #payment_form #cvc_ccv::-webkit-outer-spin-button,
 .checkout_frame #payment_form #cvc_ccv::-webkit-inner-spin-button {
@@ -481,7 +487,7 @@ nav #nav_icons a {
 }
 #add_product #brand_name {
   text-transform: uppercase;
-  color: gray;
+  color: rgb(75, 75, 75);
   text-decoration: underline;
   font-size: 1rem;
 }
@@ -707,7 +713,7 @@ footer #socials_section ul li #pinterest {
   }
 }
 /* Desktop versjon */
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1000px) {
   body {
     display: flex;
     justify-content: center;
@@ -745,14 +751,17 @@ footer #socials_section ul li #pinterest {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 3rem;
   }
   nav .nav_ul_flex {
     flex-direction: row;
-    gap: 2rem;
+    gap: 1rem;
   }
   nav .search_field_border {
     width: 16%;
+  }
+  #back {
+    position: absolute;
+    top: 7rem;
   }
   #back:hover {
     font-size: 1.2rem;
@@ -762,8 +771,8 @@ footer #socials_section ul li #pinterest {
     grid-row: 2/3;
   }
   #arrows {
-    width: 1530.37px;
-    height: 494.433px;
+    width: calc(300% + 4rem);
+    height: 100%;
     position: absolute;
     display: flex;
     justify-content: space-between;
@@ -775,7 +784,13 @@ footer #socials_section ul li #pinterest {
     margin: 0.5rem;
     border-radius: 2rem;
     cursor: pointer;
-    z-index: 999;
+    position: sticky;
+  }
+  #arrows #left-arrow {
+    left: 1%;
+  }
+  #arrows #right-arrow {
+    right: 1%;
   }
   #banner_frame {
     display: flex;
@@ -790,7 +805,7 @@ footer #socials_section ul li #pinterest {
   }
   #banner {
     background-image: url("https://picsum.photos/1600/600");
-    min-width: 94%;
+    min-width: calc(100% - 6rem);
     margin: 0;
   }
   #banner h2 {
@@ -806,6 +821,7 @@ footer #socials_section ul li #pinterest {
     text-transform: uppercase;
     font-weight: bold;
     margin-bottom: 3rem;
+    z-index: 999;
   }
   #banner2 {
     display: flex;
@@ -818,7 +834,7 @@ footer #socials_section ul li #pinterest {
     background-image: url("https://picsum.photos/1600/600");
     background-color: rgba(255, 255, 255, 0.2);
     background-blend-mode: lighten;
-    min-width: 94%;
+    min-width: calc(100% - 6rem);
     margin: 0;
   }
   #banner2 h2 {
@@ -841,6 +857,7 @@ footer #socials_section ul li #pinterest {
     border-radius: 1.5rem;
     padding: 1rem;
     margin-bottom: 3rem;
+    z-index: 999;
   }
   #banner3 {
     display: flex;
@@ -853,7 +870,7 @@ footer #socials_section ul li #pinterest {
     background-image: url("https://picsum.photos/1600/600");
     background-color: rgba(255, 255, 255, 0.2);
     background-blend-mode: lighten;
-    min-width: 94%;
+    min-width: calc(100% - 6rem);
     margin: 0;
     color: white;
   }
@@ -877,6 +894,7 @@ footer #socials_section ul li #pinterest {
     border-radius: 1.5rem;
     padding: 1rem;
     margin-bottom: 3rem;
+    z-index: 999;
   }
   .centered_h {
     font-size: 2.8rem;
@@ -962,34 +980,50 @@ footer #socials_section ul li #pinterest {
     min-width: 23%;
   }
   .checkout_frame {
-    padding: 3rem 20rem;
+    padding: 3rem 12.5rem;
   }
   .checkout_frame h2 {
     text-transform: uppercase;
+    margin-bottom: 3rem;
   }
   .checkout_frame .full_item {
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
+    align-items: center;
+    max-height: 190px;
+    margin-top: 1rem;
   }
   .checkout_frame .full_item .item_description {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
     padding: 0 1rem;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+  }
+  .checkout_frame .full_item .item_description article {
+    margin-top: 0;
   }
   .checkout_frame .full_item .item_description form {
-    grid-column: 1/2;
-    grid-row: 2/3;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0;
+  }
+  .checkout_frame .full_item .item_description form label {
+    font-size: 0.85rem;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.25rem;
   }
   .checkout_frame .full_item section {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: flex-start;
     align-items: flex-end;
     gap: 1rem;
     width: 100%;
+    height: 8rem;
+    margin-bottom: 0;
   }
   .checkout_frame #PI_grid {
     display: grid;
@@ -1048,6 +1082,9 @@ footer #socials_section ul li #pinterest {
   }
   #bredcrum_list {
     font-size: 1rem;
+  }
+  #bredcrum_list a:hover {
+    text-decoration: underline;
   }
   #add_product {
     display: grid;

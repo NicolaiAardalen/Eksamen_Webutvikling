@@ -17,8 +17,9 @@
         <header>
             <nav>
                 <form class="search_field_border">
-                    <input type="search" placeholder="søk her" class="search_field">
-                    <i class="fa-solid fa-magnifying-glass"></i>
+                    
+                        <input type="search" placeholder="søk her" class="search_field" id="search">
+                        <label for="search"><i class="fa-solid fa-magnifying-glass"></i></label>
                 </form>
                 <ul class="nav_ul_flex">
                     <li><a href="index.html">Hjem</a></li>
@@ -30,16 +31,17 @@
                 <section id="nav_icons">
                     <i class="fa-regular fa-user"></i>
                     <i class="fa-regular fa-heart"></i>
-                    <a href="checkout.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                    <a href="checkout.html" aria-label="handlevogn"><i class="fa-solid fa-cart-shopping"></i></a>
                 </section>
             </nav>
         </header>
         <main>
-            <section id="arrows">
-                <i id="left-arrow" class="fa-solid fa-arrow-left"></i>
-                <i id="right-arrow" class="fa-solid fa-arrow-right"></i>
-            </section>
+            
             <section id="banner_frame">
+                <section id="arrows">
+                    <i id="left-arrow" class="fa-solid fa-arrow-left"></i>
+                    <i id="right-arrow" class="fa-solid fa-arrow-right"></i>
+                </section>
                 <section id="banner" aria-label="Et tilfeldig bilde fra Lorem Pixum">
                     
                     <h2>At vero eos et accamus et iusto odio qui magni eos qui ratione.</h2>
@@ -299,10 +301,10 @@
             <section id="socials_section">
                 <h4>SOSIALE MEDIER</h4>
                 <ul>
-                    <li><a id="instagram" href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
-                    <li><a id="facebook" href="http://facrbook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
-                    <li><a id="linkedin" href="https://www.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
-                    <li><a id="pinterest" href="https://no.pinterest.com/" target="_blank"><i class="fa-brands fa-pinterest"></i></a></i></li>
+                    <li><a id="instagram" href="https://www.instagram.com/" target="_blank" aria-label="link til instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a id="facebook" href="http://facrbook.com/" target="_blank" aria-label="link til facebook"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a id="linkedin" href="https://www.linkedin.com/" target="_blank" aria-label="link til linkedin"><i class="fa-brands fa-linkedin"></i></a></li>
+                    <li><a id="pinterest" href="https://no.pinterest.com/" target="_blank" aria-label="link til pinterest"><i class="fa-brands fa-pinterest"></i></a></li>
                 </ul>
             </section>
         </footer>
