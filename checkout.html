@@ -12,7 +12,10 @@
     <title>Kasseside</title>
 </head>
 <body>
+    <a class="skip_to_content" href="checkout.html#main">Til hovedinnhold</a> <!-- For å lette på tilgjengeligheten -->
+    <a class="skip_to_content" href="checkout.html#footer">Til bunnen</a> <!-- For å lette på tilgjengeligheten -->
     <div id="grid-container">
+        <a id="to_top" href="checkout.html">Til toppen</a>
         <header>
             <nav>
                 <form class="search_field_border">
@@ -29,20 +32,20 @@
                 <section id="nav_icons">
                     <i class="fa-regular fa-user"></i>
                     <i class="fa-regular fa-heart"></i>
-                    <a href="checkout.html" aria-label="handlevogn"><i class="fa-solid fa-cart-shopping"></i></a>
+                    <a href="checkout.html" aria-label="handlevogn"><i class="fa-solid fa-cart-shopping"></i></a> <!--Lagt til aria-label for bedre tilgjengelighet-->
                 </section>
                 <a href="index.html" id="back"><i class="fa-solid fa-arrow-left"></i>Fortsett å handle</a>
             </nav>
         </header>
-        <main>
+        <main id="main">
             <h1 class="centered_h">Kasse</h1>
             <section class="checkout_frame">
                 <h2>1. SHOPPINGBAGEN DIN</h2>
                 <section class="full_item">
-                    <img src="https://picsum.photos/150/190" alt="Et tilfeldig bilde fra Lorem Pixum">
+                    <img src="https://picsum.photos/150/190" alt="Et tilfeldig bilde fra Lorem Pixum"> <!--Lagt til alt-tag for bedre tilgjengelighet-->
                     <section class="item_description">
                         <article>
-                            <p class="bold">PRODUCT NAME</p>
+                            <p lang="en" class="bold">PRODUCT NAME</p>  <!-- Lagt til lang for riktig språk å lette tilgjengeligheten -->
                             <p>Kr 1999</p>
                             <p>Farge: beige</p>
                         </article>
@@ -67,10 +70,10 @@
                     </section>
                 </section>
                 <section class="full_item">
-                    <img src="https://picsum.photos/150/190" alt="Et tilfeldig bilde fra Lorem Pixum">
+                    <img src="https://picsum.photos/150/190" alt="Et tilfeldig bilde fra Lorem Pixum"> <!--Lagt til alt-tag for bedre tilgjengelighet-->
                     <section class="item_description">
                         <article>
-                            <p class="bold">PRODUCT NAME</p>
+                            <p lang="en" class="bold">PRODUCT NAME</p> <!-- Lagt til lang for riktig språk å lette tilgjengeligheten -->
                             <p>Kr 1999</p>
                             <p>Farge: beige</p>
                         </article>
@@ -88,8 +91,6 @@
                                 <input type="number" name="number" value="1"> <!--https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/number-->
                             </label>
                         </form>
-                        
-                        
                     </section>
                     <section>
                         <i class="fa-regular fa-heart"></i>
@@ -97,10 +98,10 @@
                     </section>
                 </section>
                 <section class="full_item">
-                    <img src="https://picsum.photos/150/190" alt="Et tilfeldig bilde fra Lorem Pixum">
+                    <img src="https://picsum.photos/150/190" alt="Et tilfeldig bilde fra Lorem Pixum"> <!--Lagt til alt-tag for bedre tilgjengelighet-->
                     <section class="item_description">
                         <article>
-                            <p class="bold">PRODUCT NAME</p>
+                            <p lang="en" class="bold">PRODUCT NAME</p> <!-- Lagt til lang for riktig språk å lette tilgjengeligheten -->
                             <p>Kr 1999</p>
                             <p>Farge: beige</p>
                         </article>
@@ -118,8 +119,6 @@
                                 <input type="number" name="number" value="1"> <!--https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/number-->
                             </label>
                         </form>
-                        
-                        
                     </section>
                     <section>
                         <i class="fa-regular fa-heart"></i>
@@ -127,10 +126,10 @@
                     </section>
                 </section>
                 <section class="full_item">
-                    <img src="https://picsum.photos/150/190" alt="Et tilfeldig bilde fra Lorem Pixum">
+                    <img src="https://picsum.photos/150/190" alt="Et tilfeldig bilde fra Lorem Pixum"> <!--Lagt til alt-tag for bedre tilgjengelighet-->
                     <section class="item_description">
                         <article>
-                            <p class="bold">PRODUCT NAME</p>
+                            <p lang="en" class="bold">PRODUCT NAME</p>  <!-- Lagt til lang for riktig språk å lette tilgjengeligheten -->
                             <p>Kr 1999</p>
                             <p>Farge: beige</p>
                         </article>
@@ -148,8 +147,6 @@
                                 <input type="number" name="number" value="1"> <!--https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/number-->
                             </label>
                         </form>
-                        
-                        
                     </section>
                     <section>
                         <i class="fa-regular fa-heart"></i>
@@ -159,9 +156,9 @@
             </section>
             <section class="checkout_frame">
                 <h2>2. DINE OPPLYSNINGER</h2>
-                <section>
+                <form>
                     <h3 class="delivery_h3">Leveringsadresse</h3>
-                    <form class="personal_information" id="PI_grid">
+                    <section class="personal_information" id="PI_grid">
                         <label for="first_name">Fornavn
                             <input name="first_name" id="first_name" type="text" placeholder="Ola*">
                         </label>
@@ -177,21 +174,21 @@
                         <label for="post_location">Poststed
                             <input name="post_location" id="post_location" type="text" placeholder="Halden*">
                         </label>
-                    </form>
+                    </section>
                     <h3 class="delivery_h3">Kontaktinformasjon</h3>
-                    <form class="personal_information">
+                    <section class="personal_information">
                         <label for="e-mail">E-post
                             <input name="e-mail" id="e-mail" type="text" placeholder="Olanordmann@hiof.no..*">
                         </label>
                         <label for="phone">Telefon
                             <input name="phone" id="phone" type="text" placeholder="+4749***018*">
                         </label>
-                    </form>
-                    <form>
+                    </section>
+                    <section>
                         <input id="save_info" type="submit" value="Lagre"> <!--https://stackoverflow.com/questions/14007613/change-text-from-submit-on-input-tag-->
                         <input id="cancel_info" type="button" value="Avbryt">
-                    </form>
-                </section>
+                    </section>
+                </form>
             </section>
             <section class="checkout_frame">
                 <h2>3. Levering</h2>
@@ -254,7 +251,7 @@
                 </form>
             </section>
         </main>
-        <footer>
+        <footer id="footer">
             <section id="logo_section">
                 <p id="logo_footer">Logo</p>
                 <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis.</p>
@@ -291,10 +288,10 @@
             <section id="socials_section">
                 <h4>SOSIALE MEDIER</h4>
                 <ul>
-                    <li><a id="instagram" href="https://www.instagram.com/" target="_blank" aria-label="link til instagram"><i class="fa-brands fa-instagram"></i></a></li>
-                    <li><a id="facebook" href="http://facrbook.com/" target="_blank" aria-label="link til facebook"><i class="fa-brands fa-facebook"></i></a></li>
-                    <li><a id="linkedin" href="https://www.linkedin.com/" target="_blank" aria-label="link til linkedin"><i class="fa-brands fa-linkedin"></i></a></li>
-                    <li><a id="pinterest" href="https://no.pinterest.com/" target="_blank" aria-label="link til pinterest"><i class="fa-brands fa-pinterest"></i></a></li>
+                    <li><a id="instagram" href="https://www.instagram.com/" target="_blank" aria-label="link til instagram"><i class="fa-brands fa-instagram"></i></a></li> <!--Lagt til aria-label for bedre tilgjengelighet-->
+                    <li><a id="facebook" href="http://facrbook.com/" target="_blank" aria-label="link til facebook"><i class="fa-brands fa-facebook"></i></a></li> <!--Lagt til aria-label for bedre tilgjengelighet-->
+                    <li><a id="linkedin" href="https://www.linkedin.com/" target="_blank" aria-label="link til linkedin"><i class="fa-brands fa-linkedin"></i></a></li> <!--Lagt til aria-label for bedre tilgjengelighet-->
+                    <li><a id="pinterest" href="https://no.pinterest.com/" target="_blank" aria-label="link til pinterest"><i class="fa-brands fa-pinterest"></i></a></li> <!--Lagt til aria-label for bedre tilgjengelighet-->
                 </ul>
             </section>
         </footer>

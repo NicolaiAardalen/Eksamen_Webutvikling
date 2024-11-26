@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -9,6 +10,35 @@ body {
 #invisible {
   display: none;
   position: absolute;
+}
+
+.skip_to_content {
+  position: absolute;
+  left: 0;
+  top: -10%;
+  background-color: black;
+  color: white;
+  padding: 1rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.skip_to_content:focus {
+  top: 0;
+}
+
+#to_top {
+  position: fixed;
+  bottom: 1%;
+  right: 1%;
+  color: white;
+  background-color: darkgreen;
+  text-decoration: none;
+  padding: 1rem;
+  border-radius: 2rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+  z-index: 999;
 }
 
 nav {
@@ -383,7 +413,7 @@ nav #nav_icons a {
   font-weight: bold;
 }
 .checkout_frame .deliveriy_frame .gray {
-  color: rgb(75, 75, 75);
+  color: rgb(75, 75, 75); /* Endret fargen fra standard grå "rgb(128, 128, 128)", til en litt mørkere gråfrage for å øke kontrasten for å forbedre tilgjengeligheten*/
   font-weight: bold;
   margin: 0.4rem 0 0 0;
 }
@@ -447,6 +477,7 @@ nav #nav_icons a {
   margin: 0;
   color: white;
   background-color: rgb(54, 51, 51);
+  font-weight: bold;
 }
 .checkout_frame #payment_confirm #comfirmation_text {
   margin: 1.5rem 0;
@@ -487,7 +518,7 @@ nav #nav_icons a {
 }
 #add_product #brand_name {
   text-transform: uppercase;
-  color: rgb(75, 75, 75);
+  color: rgb(75, 75, 75); /* Endret fragen fra standardgrå "rgb(128, 128, 128)", til en litt mørkere gråfarge, for å øke kontrasten for å forbedre tilgjengeligheten*/
   text-decoration: underline;
   font-size: 1rem;
 }
