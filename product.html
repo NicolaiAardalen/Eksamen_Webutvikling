@@ -11,20 +11,20 @@
     <link rel="stylesheet" href="ikoner/fontawesome-free-6.6.0-web/css/fontawesome.css">
     <link rel="stylesheet" href="ikoner/fontawesome-free-6.6.0-web/css/brands.css">
     <link rel="stylesheet" href="ikoner/fontawesome-free-6.6.0-web/css/regular.css">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Produktside</title>
 </head>
 <body>
+    <h1 id="invisible">Produktside</h1> <!-- For bedre tilgjengelighet og SEO -->
     <a class="skip_to_content" href="product.html#main">Til hovedinnhold</a> <!-- For å lette på tilgjengeligheten -->
     <a class="skip_to_content" href="product.html#aside">Til sideinnhold</a> <!-- For å lette på tilgjengeligheten -->
     <a class="skip_to_content" href="product.html#footer">Til bunnen</a> <!-- For å lette på tilgjengeligheten -->
     <div id="grid-container">
-        <a id="to_top" href="product.html">Til toppen</a>
         <header>
             <nav>
                 <form class="search_field_border">
-                    <input type="search" placeholder="søk her" class="search_field">
-                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="search" placeholder="søk her" class="search_field" id="search">
+                    <label for="search" aria-label="forstørrelsesglass"><i class="fa-solid fa-magnifying-glass"></i></label> <!--Lagt til aria-label for bedre tilgjengelighet-->
                 </form>
                 <ul class="nav_ul_flex">
                     <li><a href="index.html">Hjem</a></li>
@@ -76,23 +76,21 @@
                         <img src="pictures/Product-big.jpg" alt="Et bilde av en brudekjole" itemprop="image"> <!--Lagt til alt-tag for bedre tilgjengelighet--> <!--Image by <a href="https://pixabay.com/users/asphotohrapy-1546875/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1967312">AS Photograpy</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1967312">Pixabay</a>-->
                     </picture>
                 </section>
-                <div id="product_scroll">
+                <section id="product_scroll">
                     <section id="purchase_info">
                         <p class="product_name" itemprop="name">Produktnavn</p>
                         <a href="#" id="brand_name"><span itemprop="brand">Merkenavn</span></a>
                         <p itemprop="offers" itemscope itemtype="https://schema.org/Offer"><span itemprop="price" content="5195">5 195</span> <span itemprop="priceCurrency" content="NOK">kr</span> inkl. mva.</p>
                         <p>Farge: <span class="bold" itemprop="color">beige</span></p>
                     </section>
-                    <form id="choose_size">
-                        <select> <!--https://blog.logrocket.com/creating-custom-select-dropdown-css/-->
-                            <option selected>Velg størrelse</option>
-                            <span itemprop="size">
-                                <option>XS</option>
-                                <option>S</option>
-                                <option>M</option>
-                                <option>L</option>
-                                <option>XL</option>
-                            </span>
+                    <form id="choose_size" itemprop="size">
+                        <select aria-label="Velg størrelse"> <!--https://blog.logrocket.com/creating-custom-select-dropdown-css/-->
+                            <option disabled selected>Velg størrelse</option>
+                            <option aria-label="ekstra smal">XS</option>
+                            <option aria-label="Smal">S</option>
+                            <option aria-label="Medium">M</option>
+                            <option aria-label="Stor">L</option>
+                            <option aria-label="Ekstra stor">XL</option>
                         </select>
                         <input type="submit" value="Legg i handlekurv">
                         <i class="fa-regular fa-heart"></i>
@@ -100,7 +98,7 @@
                     <section id="product_info">
                         <details> <!--https://www.w3schools.com/tags/tag_details.asp--> <!--https://www.sitepoint.com/style-html-details-element/-->
                             <summary>
-                                <h3>Materiale og vedlikehold</h3>
+                                <h2>Materiale og vedlikehold</h2>
                                 <i class="fa-solid fa-plus"></i>
                             </summary>
                             <ul>
@@ -111,14 +109,14 @@
                         </details>
                         <details> <!--https://www.w3schools.com/tags/tag_details.asp--> <!--https://www.sitepoint.com/style-html-details-element/-->
                             <summary>
-                                <h3>Produktdealjer</h3>
+                                <h2>Produktdealjer</h2>
                                 <i class="fa-solid fa-plus"></i>
                             </summary>
                             <p lang="en">Epcot is a theme park at Walt Disney World Resort featuring exciting attractions. international pavilions, award-winning fireworks and seasonal special events</p>
                         </details>
                         <details> <!--https://www.w3schools.com/tags/tag_details.asp--> <!--https://www.sitepoint.com/style-html-details-element/-->
                             <summary>
-                                <h3>Størrelsestabell</h3>
+                                <h2>Størrelsestabell</h2>
                                 <i class="fa-solid fa-plus"></i>
                             </summary>
                             <p>Sjekk hvordan din vanlige størrelse konverterer til andre størrelser i vår størrelsesguide. Husk at 
@@ -240,17 +238,15 @@
                         </details>
                         <details itemprop="review" itemscope itemtype="https://schema.org/Review">
                             <summary>
-                                <h3 class="bold">Anmeldeser</h3>
+                                <h2 class="bold">Anmeldeser</h2>
                                 <span itemprop="itemReviewed" itemscope itemtype="https://schema.org/Product">
                                     <meta itemprop="name" content="Product name">
                                     <span itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
-                                        <span aria-label="4 av 5 stjerner">
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-regular fa-star"></i>
-                                        </span>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
                                         <span itemprop="reviewCount">32</span>
                                         <meta itemprop="ratingValue" content="4">
                                         <meta itemprop="bestRating" content="5">
@@ -274,12 +270,12 @@
                             </section>
                         </details>
                     </section>
-                </div>
+                </section>
             </section>
         </main>
         <aside id="aside">
             <section id="similar_products">
-                <h2>Lignende produkter</h2>
+                <h3>Lignende produkter</h3>
                 <a href="index.html#popular_products">Se flere lignende produkter <i class="fa-solid fa-arrow-right"></i></a>
                 <section id="scroll_section">
                     <section class="product" itemscope itemtype="https://schema.org/Product">
@@ -296,13 +292,11 @@
                             <p itemprop="offers" itemscope itemtype="https://schema.org/Offer"><span itemprop="priceCurrency" content="NOK">Kr</span> <span itemprop="price">1999</span></p>
                         </section>
                         <section class="product_score" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
-                            <span aria-label="4 av 5 stjerner">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                            </span>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
                             <p lang="en" class="bold"><span itemprop="reviewCount">842</span> Reviews</p> <!-- Lagt til lang for riktig språk å lette tilgjengeligheten -->
                             <meta itemprop="ratingValue" content="4">
                             <meta itemprop="bestRating" content="5">
@@ -322,13 +316,11 @@
                             <p itemprop="offers" itemscope itemtype="https://schema.org/Offer"><span itemprop="priceCurrency" content="NOK">Kr</span> <span itemprop="price">1999</span></p>
                         </section>
                         <section class="product_score" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
-                            <span aria-label="4 av 5 stjerner">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                            </span>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
                             <p lang="en" class="bold"><span itemprop="reviewCount">842</span> Reviews</p> <!-- Lagt til lang for riktig språk å lette tilgjengeligheten -->
                             <meta itemprop="ratingValue" content="4">
                             <meta itemprop="bestRating" content="5">
@@ -348,13 +340,11 @@
                             <p itemprop="offers" itemscope itemtype="https://schema.org/Offer"><span itemprop="priceCurrency" content="NOK">Kr</span> <span itemprop="price">1999</span></p>
                         </section>
                         <section class="product_score" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
-                            <span aria-label="4 av 5 stjerner">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                            </span>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
                             <p lang="en" class="bold"><span itemprop="reviewCount">842</span> Reviews</p> <!-- Lagt til lang for riktig språk å lette tilgjengeligheten -->
                             <meta itemprop="ratingValue" content="4">
                             <meta itemprop="bestRating" content="5">
@@ -374,13 +364,11 @@
                             <p itemprop="offers" itemscope itemtype="https://schema.org/Offer"><span itemprop="priceCurrency" content="NOK">Kr</span> <span itemprop="price">1999</span></p>
                         </section>
                         <section class="product_score" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
-                            <span aria-label="4 av 5 stjerner">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                            </span>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
                             <p lang="en" class="bold"><span itemprop="reviewCount">842</span> Reviews</p> <!-- Lagt til lang for riktig språk å lette tilgjengeligheten -->
                             <meta itemprop="ratingValue" content="4">
                             <meta itemprop="bestRating" content="5">
@@ -400,13 +388,11 @@
                             <p itemprop="offers" itemscope itemtype="https://schema.org/Offer"><span itemprop="priceCurrency" content="NOK">Kr</span> <span itemprop="price">1999</span></p>
                         </section>
                         <section class="product_score" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
-                            <span aria-label="4 av 5 stjerner">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                            </span>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
                             <p lang="en" class="bold"><span itemprop="reviewCount">842</span> Reviews</p> <!-- Lagt til lang for riktig språk å lette tilgjengeligheten -->
                             <meta itemprop="ratingValue" content="4">
                             <meta itemprop="bestRating" content="5">
@@ -426,13 +412,11 @@
                             <p itemprop="offers" itemscope itemtype="https://schema.org/Offer"><span itemprop="priceCurrency" content="NOK">Kr</span> <span itemprop="price">1999</span></p>
                         </section>
                         <section class="product_score" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
-                            <span aria-label="4 av 5 stjerner">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                            </span>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
                             <p lang="en" class="bold"><span itemprop="reviewCount">842</span> Reviews</p> <!-- Lagt til lang for riktig språk å lette tilgjengeligheten -->
                             <meta itemprop="ratingValue" content="4">
                             <meta itemprop="bestRating" content="5">
@@ -452,13 +436,11 @@
                             <p itemprop="offers" itemscope itemtype="https://schema.org/Offer"><span itemprop="priceCurrency" content="NOK">Kr</span> <span itemprop="price">1999</span></p>
                         </section>
                         <section class="product_score" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
-                            <span aria-label="4 av 5 stjerner">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                            </span>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
                             <p lang="en" class="bold"><span itemprop="reviewCount">842</span> Reviews</p> <!-- Lagt til lang for riktig språk å lette tilgjengeligheten -->
                             <meta itemprop="ratingValue" content="4">
                             <meta itemprop="bestRating" content="5">
@@ -478,13 +460,11 @@
                             <p itemprop="offers" itemscope itemtype="https://schema.org/Offer"><span itemprop="priceCurrency" content="NOK">Kr</span> <span itemprop="price">1999</span></p>
                         </section>
                         <section class="product_score" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
-                            <span aria-label="4 av 5 stjerner">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                            </span>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
                             <p lang="en" class="bold"><span itemprop="reviewCount">842</span> Reviews</p> <!-- Lagt til lang for riktig språk å lette tilgjengeligheten -->
                             <meta itemprop="ratingValue" content="4">
                             <meta itemprop="bestRating" content="5">
@@ -504,13 +484,11 @@
                             <p itemprop="offers" itemscope itemtype="https://schema.org/Offer"><span itemprop="priceCurrency" content="NOK">Kr</span> <span itemprop="price">1999</span></p>
                         </section>
                         <section class="product_score" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
-                            <span aria-label="4 av 5 stjerner">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                            </span>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
                             <p lang="en" class="bold"><span itemprop="reviewCount">842</span> Reviews</p> <!-- Lagt til lang for riktig språk å lette tilgjengeligheten -->
                             <meta itemprop="ratingValue" content="4">
                             <meta itemprop="bestRating" content="5">
@@ -530,13 +508,11 @@
                             <p itemprop="offers" itemscope itemtype="https://schema.org/Offer"><span itemprop="priceCurrency" content="NOK">Kr</span> <span itemprop="price">1999</span></p>
                         </section>
                         <section class="product_score" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
-                            <span aria-label="4 av 5 stjerner">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                            </span>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
                             <p lang="en" class="bold"><span itemprop="reviewCount">842</span> Reviews</p> <!-- Lagt til lang for riktig språk å lette tilgjengeligheten -->
                             <meta itemprop="ratingValue" content="4">
                             <meta itemprop="bestRating" content="5">
@@ -556,13 +532,11 @@
                             <p itemprop="offers" itemscope itemtype="https://schema.org/Offer"><span itemprop="priceCurrency" content="NOK">Kr</span> <span itemprop="price">1999</span></p>
                         </section>
                         <section class="product_score" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
-                            <span aria-label="4 av 5 stjerner">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                            </span>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
                             <p lang="en" class="bold"><span itemprop="reviewCount">842</span> Reviews</p> <!-- Lagt til lang for riktig språk å lette tilgjengeligheten -->
                             <meta itemprop="ratingValue" content="4">
                             <meta itemprop="bestRating" content="5">
@@ -603,6 +577,7 @@
                     <li><a href="index.html#popular_products">Produkter</a></li>
                     <li><a href="index.html#popular_categories">Kategorier</a></li>
                     <li><a href="index.html#contact_section">Kontakt oss</a></li>
+                    <li><a href="Tilgjengelighetserklæring/Tilgjengelighetserklæring.pdf" target="_blank">Tilgjengelighetserklæring</a></li>
                 </ul>
             </section>
             <section id="socials_section">
@@ -615,6 +590,7 @@
                 </ul>
             </section>
         </footer>
+        <a id="to_top" href="product.html">Til toppen</a>
     </div>
 </body>
 </html>

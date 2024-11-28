@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="ikoner/fontawesome-free-6.6.0-web/css/fontawesome.css">
     <link rel="stylesheet" href="ikoner/fontawesome-free-6.6.0-web/css/brands.css">
     <link rel="stylesheet" href="ikoner/fontawesome-free-6.6.0-web/css/regular.css">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Forside</title>
 </head>
 <body>
@@ -19,12 +19,11 @@
     <a class="skip_to_content" href="index.html#main">Til hovedinnhold</a> <!-- For å lette på tilgjengeligheten -->
     <a class="skip_to_content" href="index.html#footer">Til bunnen</a> <!-- For å lette på tilgjengeligheten -->
     <div id="grid-container">
-        <a id="to_top" href="index.html">Til toppen</a>
         <header>
             <nav>
                 <form class="search_field_border">
                     <input type="search" placeholder="søk her" class="search_field" id="search">
-                    <label for="search"><i class="fa-solid fa-magnifying-glass"></i></label>
+                    <label for="search" aria-label="forstørrelsesglass"><i class="fa-solid fa-magnifying-glass"></i></label> <!--Lagt til aria-label for bedre tilgjengelighet-->
                 </form>
                 <ul class="nav_ul_flex">
                     <li><a href="index.html">Hjem</a></li>
@@ -110,7 +109,9 @@
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-regular fa-star"></i>
+                            <meta itemprop="reviewCount" content="842">
                             <meta itemprop="ratingValue" content="4">
+                            <meta itemprop="bestRating" content="5">
                             <p lang="en" class="bold"><span itemprop="reviewCount">842</span> Reviews</p> <!-- Lagt til lang for riktig språk å lette tilgjengeligheten -->
                         </section>
                     </section>
@@ -130,7 +131,9 @@
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-regular fa-star"></i>
+                            <meta itemprop="reviewCount" content="842">
                             <meta itemprop="ratingValue" content="4">
+                            <meta itemprop="bestRating" content="5">
                             <p lang="en" class="bold"><span itemprop="reviewCount">842</span> Reviews</p> <!-- Lagt til lang for riktig språk å lette tilgjengeligheten -->
                         </section>
                     </section>
@@ -150,7 +153,9 @@
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-regular fa-star"></i>
+                            <meta itemprop="reviewCount" content="842">
                             <meta itemprop="ratingValue" content="4">
+                            <meta itemprop="bestRating" content="5">
                             <p lang="en" class="bold"><span itemprop="reviewCount">842</span> Reviews</p> <!-- Lagt til lang for riktig språk å lette tilgjengeligheten -->
                         </section>
                     </section>
@@ -170,7 +175,9 @@
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-regular fa-star"></i>
+                            <meta itemprop="reviewCount" content="842">
                             <meta itemprop="ratingValue" content="4">
+                            <meta itemprop="bestRating" content="5">
                             <p lang="en" class="bold"><span itemprop="reviewCount">842</span> Reviews</p> <!-- Lagt til lang for riktig språk å lette tilgjengeligheten -->
                         </section>
                     </section>
@@ -190,7 +197,9 @@
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-regular fa-star"></i>
+                            <meta itemprop="reviewCount" content="842">
                             <meta itemprop="ratingValue" content="4">
+                            <meta itemprop="bestRating" content="5">
                             <p lang="en" class="bold"><span itemprop="reviewCount">842</span> Reviews</p> <!-- Lagt til lang for riktig språk å lette tilgjengeligheten -->
                         </section>
                     </section>
@@ -210,7 +219,9 @@
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-regular fa-star"></i>
+                            <meta itemprop="reviewCount" content="842">
                             <meta itemprop="ratingValue" content="4">
+                            <meta itemprop="bestRating" content="5">
                             <p lang="en" class="bold"><span itemprop="reviewCount">842</span> Reviews</p> <!-- Lagt til lang for riktig språk å lette tilgjengeligheten -->
                         </section>
                     </section>
@@ -254,13 +265,11 @@
                         <img src="pictures/review-profile.jpg" alt="Et bilde av en hund"> <!--Lagt til alt-tag for bedre tilgjengelighet--> <!--Image by <a href="https://pixabay.com/users/dannaragrim-5924518/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=7128749">Dann Aragrim</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=7128749">Pixabay</a>-->
                         <p class="review_name" itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Rober Labrador</span></p>
                         <section class="reviews">
-                            <span aria-label="3 av 5 stjerner">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                            </span>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
                         </section>
                         <span itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
                             <meta itemprop="ratingValue" content="3">
@@ -282,13 +291,11 @@
                         <img src="pictures/review-profile.jpg" alt="Et bilde av en hund"> <!--Lagt til alt-tag for bedre tilgjengelighet--> <!--Image by <a href="https://pixabay.com/users/dannaragrim-5924518/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=7128749">Dann Aragrim</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=7128749">Pixabay</a>-->
                         <p class="review_name" itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Rober Labrador</span></p>
                         <section class="reviews">
-                            <span aria-label="3 av 5 stjerner">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                            </span>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
                         </section>
                         <span itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
                             <meta itemprop="ratingValue" content="3">
@@ -310,13 +317,11 @@
                         <img src="pictures/review-profile.jpg" alt="Et bilde av en hund"> <!--Lagt til alt-tag for bedre tilgjengelighet--> <!--Image by <a href="https://pixabay.com/users/dannaragrim-5924518/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=7128749">Dann Aragrim</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=7128749">Pixabay</a>-->
                         <p class="review_name" itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Rober Labrador</span></p>
                         <section class="reviews">
-                            <span aria-label="3 av 5 stjerner">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                            </span>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
                         </section>
                         <span itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
                             <meta itemprop="ratingValue" content="3">
@@ -338,13 +343,11 @@
                         <img src="pictures/review-profile.jpg" alt="Et bilde av en hund"> <!--Lagt til alt-tag for bedre tilgjengelighet--> <!--Image by <a href="https://pixabay.com/users/dannaragrim-5924518/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=7128749">Dann Aragrim</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=7128749">Pixabay</a>-->
                         <p class="review_name" itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Rober Labrador</span></p>
                         <section class="reviews">
-                            <span aria-label="3 av 5 stjerner">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                            </span>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
                         </section>
                         <span itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
                             <meta itemprop="ratingValue" content="3">
@@ -397,6 +400,7 @@
                     <li><a href="index.html#popular_products">Produkter</a></li>
                     <li><a href="index.html#popular_categories">Kategorier</a></li>
                     <li><a href="index.html#contact_section">Kontakt oss</a></li>
+                    <li><a href="Tilgjengelighetserklæring/Tilgjengelighetserklæring.pdf" target="_blank">Tilgjengelighetserklæring</a></li>
                 </ul>
             </section>
             <section id="socials_section">
@@ -409,6 +413,7 @@
                 </ul>
             </section>
         </footer>
+        <a id="to_top" href="index.html">Til toppen</a>
     </div>
 </body>
 </html>

@@ -11,19 +11,18 @@
     <link rel="stylesheet" href="ikoner/fontawesome-free-6.6.0-web/css/fontawesome.css">
     <link rel="stylesheet" href="ikoner/fontawesome-free-6.6.0-web/css/brands.css">
     <link rel="stylesheet" href="ikoner/fontawesome-free-6.6.0-web/css/regular.css">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Kasseside</title>
 </head>
 <body>
     <a class="skip_to_content" href="checkout.html#main">Til hovedinnhold</a> <!-- For å lette på tilgjengeligheten -->
     <a class="skip_to_content" href="checkout.html#footer">Til bunnen</a> <!-- For å lette på tilgjengeligheten -->
     <div id="grid-container">
-        <a id="to_top" href="checkout.html">Til toppen</a>
         <header>
             <nav>
                 <form class="search_field_border">
-                    <input type="search" placeholder="søk her" class="search_field">
-                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="search" placeholder="søk her" class="search_field" id="search">
+                    <label for="search" aria-label="forstørrelsesglass"><i class="fa-solid fa-magnifying-glass"></i></label> <!--Lagt til aria-label for bedre tilgjengelighet-->
                 </form>
                 <ul class="nav_ul_flex">
                     <li><a href="index.html">Hjem</a></li>
@@ -159,37 +158,38 @@
             </section>
             <section class="checkout_frame">
                 <h2>2. DINE OPPLYSNINGER</h2>
-                <form itemscope itemprop="Person" itemtype="https://schema.org/Person">
+                <!-- https://www.w3schools.com/tags/att_input_pattern.asp -->
+                <form itemscope itemtype="https://schema.org/Person">
                     <h3 class="delivery_h3">Leveringsadresse</h3>
                     <section class="personal_information" id="PI_grid">
                         <label for="first_name">Fornavn
-                            <input name="first_name" id="first_name" type="text" placeholder="Ola*" itemprop="givenName" content="Ola">
+                            <input name="first_name" id="first_name" type="text" placeholder="Ola*" maxlength="45" pattern="^[A-Za-zÆØÅæøåÉéÈè \-']{1,45}$" required itemprop="givenName" content="Ola">
                         </label>
                         <label for="last_name">Etternavn
-                            <input name="last_name" id="last_name" type="text" placeholder="Nordmann*" itemprop="familyName" content="Nordmann">
+                            <input name="last_name" id="last_name" type="text" placeholder="Nordmann*" maxlength="45" pattern="^[A-Za-zÆØÅæøåÉéÈè \-']{1,45}$" required itemprop="familyName" content="Nordmann">
                         </label>
                         <label for="street" id="street_adress">Gateadresse
-                            <input name="street" id="street" type="text" placeholder="BRA veien 4*">
+                            <input name="street" id="street" type="text" placeholder="BRA veien 4*" maxlength="100" pattern="^[A-Za-zÆØÅæøåÉéÈè0-9 .,\/\-']{1,100}$" required>
                         </label>
                         <label for="post_number">Postnummer
-                            <input name="post_number" id="post_number" type="number" placeholder="1752*">
+                            <input name="post_number" id="post_number" type="text" placeholder="1752*" maxlength="4" pattern="^\d{4}$" required>
                         </label>
                         <label for="post_location">Poststed
-                            <input name="post_location" id="post_location" type="text" placeholder="Halden*">
+                            <input name="post_location" id="post_location" type="text" placeholder="Halden*" maxlength="50" pattern="^[A-Za-zÆØÅæøåÉéÈè \-']{2,50}$" required>
                         </label>
                     </section>
                     <h3 class="delivery_h3">Kontaktinformasjon</h3>
                     <section class="personal_information">
                         <label for="e-mail">E-post
-                            <input name="e-mail" id="e-mail" type="text" placeholder="Olanordmann@hiof.no..*" itemprop="email" content="Olanordmann@hiof.no">
+                            <input name="e-mail" id="e-mail" type="email" placeholder="Olanordmann@hiof.no..*" maxlength="254" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,254}$" required itemprop="email" content="Olanordmann@hiof.no">
                         </label>
                         <label for="phone">Telefon
-                            <input name="phone" id="phone" type="text" placeholder="+4749***018*" itemprop="telephone" content="+4749***018">
+                            <input name="phone" id="phone" type="tel" placeholder="+4749***018*" maxlength="15" pattern="^\+?[0-9]{7,15}$" required itemprop="telephone" content="+4749***018">
                         </label>
                     </section>
                     <section>
                         <input id="save_info" type="submit" value="Lagre"> <!--https://stackoverflow.com/questions/14007613/change-text-from-submit-on-input-tag-->
-                        <input id="cancel_info" type="button" value="Avbryt">
+                        <input id="cancel_info" type="reset" value="Avbryt">
                     </section>
                 </form>
             </section>
@@ -198,44 +198,45 @@
                 <h3 class="uppercase">Leveringsvalg</h3>
                 <form>
                     <section class="deliveriy_frame" itemscope itemtype="https://schema.org/ShippingDeliveryTime">
-                            <label for="express_home">
-                                <input name="delivery_option" id="express_home" type="radio">
-                            <span itemprop="name">Ekspress Hjemlevering</span></label>
-                            <p class="gray" itemprop="businessDays">3-4 Virkedager</p>
-                            <p class="flex-icon" itemscope itemtype="https://schema.org/Offer"><span itemprop="price">59</span> <span itemprop="priceCurrency" content="NOK">kr</span> <i class="fa-solid fa-truck-fast"></i></p>
-                            <p class="delivery_info" itemprop="description">bestill hverdag før 08:00* for levering neste arbeidsdag. Leveres hjem til seg før frokost mandag til lørdag. 
-                                *For elevring til postnummer 4000-7999 er leveringstiden 2 arbeidsdager, for postnummer 8000-9999 er leveringstiden 3 arbeidsdager.</p>
+                        <label for="express_home">
+                            <input name="delivery_option" id="express_home" type="radio">
+                        <span itemprop="name">Ekspress Hjemlevering</span></label>
+                        <p class="gray" itemprop="businessDays">3-4 Virkedager</p>
+                        <p class="flex-icon" itemscope itemtype="https://schema.org/Offer"><span itemprop="price">59</span> <span itemprop="priceCurrency" content="NOK">kr</span> <i class="fa-solid fa-truck-fast"></i></p>
+                        <p class="delivery_info" itemprop="description">bestill hverdag før 08:00* for levering neste arbeidsdag. Leveres hjem til seg før frokost mandag til lørdag. 
+                            *For elevring til postnummer 4000-7999 er leveringstiden 2 arbeidsdager, for postnummer 8000-9999 er leveringstiden 3 arbeidsdager.</p>
                     </section>
                     <section class="deliveriy_frame" itemscope itemtype="https://schema.org/ShippingDeliveryTime">
-                            <label for="express_pickup">
-                                <input name="delivery_option" id="express_pickup" type="radio">
-                            <span itemprop="name">Ekspress Pakke til utleveringssted</span></label>
-                            <p class="gray" itemprop="businessDays">1-3 Virkedager</p>
-                            <p class="flex-icon" itemscope itemtype="https://schema.org/Offer"><span itemprop="price">59</span> <span itemprop="priceCurrency" content="NOK">kr</span> <i class="fa-brands fa-dhl"></i></p>
+                        <label for="express_pickup">
+                            <input name="delivery_option" id="express_pickup" type="radio">
+                        <span itemprop="name">Ekspress Pakke til utleveringssted</span></label>
+                        <p class="gray" itemprop="businessDays">1-3 Virkedager</p>
+                        <p class="flex-icon" itemscope itemtype="https://schema.org/Offer"><span itemprop="price">59</span> <span itemprop="priceCurrency" content="NOK">kr</span> <i class="fa-brands fa-dhl"></i></p>
                     </section>
                     <section class="deliveriy_frame" itemscope itemtype="https://schema.org/ShippingDeliveryTime">
-                            <label for="standard_home">
-                                <input name="delivery_option" id="standard_home" type="radio">
-                            <span itemprop="name">Standard Hjemlevering</span></label>
-                            <p class="gray" itemprop="businessDays">5-8 Virkedager</p>
-                            <p class="flex-icon" itemscope itemtype="https://schema.org/Offer"><span itemprop="price" content="0">Gratis</span> <i class="fa-solid fa-box"></i></p>
-                            <p class="delivery_info" itemprop="description">Leveres hjem til deg før frokost mandag til lørdag innen 4-7 hverdager.</p>
+                        <label for="standard_home">
+                            <input name="delivery_option" id="standard_home" type="radio">
+                        <span itemprop="name">Standard Hjemlevering</span></label>
+                        <p class="gray" itemprop="businessDays">5-8 Virkedager</p>
+                        <p class="flex-icon" itemscope itemtype="https://schema.org/Offer"><span itemprop="price" content="0">Gratis</span> <i class="fa-solid fa-box"></i></p>
+                        <p class="delivery_info" itemprop="description">Leveres hjem til deg før frokost mandag til lørdag innen 4-7 hverdager.</p>
                     </section>
                 </form>
             </section>
             <section class="checkout_frame">
                 <h2>4. BETALING</h2>
+                <!-- https://www.w3schools.com/tags/att_input_pattern.asp -->
                 <form>
                     <section id="payment_form">
                         <h3>BETAL MED KORT <i class="fa-solid fa-credit-card"></i></h3>
                         <label for="card_number" id="card_num">Kortnummer
-                            <input type="number" name="card_number" id="card_number" placeholder="342342****4425">
+                            <input type="text" name="card_number" id="card_number" placeholder="342342****4425" maxlength="19" pattern="^\d{4}(\s?\d{4}){3}$" required>
                         </label>
                         <label for="expiry_date">Utløpsdato
-                            <input type="date" name="expiry_date" id="expiry_date">
+                            <input type="text" name="expiry_date" id="expiry_date" placeholder="MM-YY" maxlength="5" pattern="^(0[1-9]|1[0-2])-\d{2}$" required>
                         </label>
                         <label for="cvc_ccv">CVC/CVV
-                            <input type="number" name="cvc_ccv" id="cvc_ccv" placeholder="CVC/CVV">
+                            <input type="text" name="cvc_ccv" id="cvc_ccv" placeholder="CVC/CVV" maxlength="4" pattern="^\d{3,4}$" required>
                         </label>
                     </section>
                     <section id="payment_confirm">
@@ -286,6 +287,7 @@
                     <li><a href="index.html#popular_products">Produkter</a></li>
                     <li><a href="index.html#popular_categories">Kategorier</a></li>
                     <li><a href="index.html#contact_section">Kontakt oss</a></li>
+                    <li><a href="Tilgjengelighetserklæring/Tilgjengelighetserklæring.pdf" target="_blank">Tilgjengelighetserklæring</a></li>
                 </ul>
             </section>
             <section id="socials_section">
@@ -298,6 +300,7 @@
                 </ul>
             </section>
         </footer>
+        <a id="to_top" href="checkout.html">Til toppen</a>
     </div>
 </body>
 </html>
