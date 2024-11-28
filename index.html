@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dette er forsiden til eksamensprosjektet for webutvikling, høsten 2024">
+    <meta name="author" content="Nicolai Aardalen">
+    <meta name="keywords" content="Nettbutikk, Forside, Produkter, Kategorier, Anmeldelser, Eksamensprosjekt">
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
     <link rel="stylesheet" href="ikoner/fontawesome-free-6.6.0-web/css/solid.css">
     <link rel="stylesheet" href="ikoner/fontawesome-free-6.6.0-web/css/fontawesome.css">
@@ -43,22 +46,39 @@
                     <i id="left-arrow" class="fa-solid fa-arrow-left"></i>
                     <i id="right-arrow" class="fa-solid fa-arrow-right"></i>
                 </section>
-                <section id="banner" aria-label="Et tilfeldig bilde fra Lorem Pixum"> <!--Lagt til aria-label for bedre tilgjengelighet-->
-                    
+                <section id="banner" aria-label="Et bilde av en elv som går igjennom en by" itemscope itemtype="https://schema.org/ImageObject"> <!--Lagt til aria-label for bedre tilgjengelighet-->
+                    <meta itemprop="url" content="pictures/Banner1.jpg">
+                    <meta itemprop="contentUrl" content="pictures/Banner1.jpg">
+                    <meta itemprop="width" content="500">
+                    <meta itemprop="height" content="600">
+                    <meta itemprop="description" content="En elv som går igjennom en by">
+                    <meta itemprop="url" content="pictures/Banner1-Desktop.jpg">
+                    <meta itemprop="contentUrl" content="pictures/Banner1-Desktop.jpg">
+                    <meta itemprop="width" content="900">
+                    <meta itemprop="height" content="650">
+                    <meta itemprop="description" content="En elv som går igjennom en by - Desktop-versjon">
                     <h2>At vero eos et accamus et iusto odio qui magni eos qui ratione.</h2>
                     <p>Sed ut peciatis unde omnis iste natus error sit voltem acctium doloue latium, 
                         totam rem aperiam.</p>
                     <a href="index.html">Les mer</a>
                 </section>
-                
-                <section id="banner2" aria-label="Et tilfeldig bilde fra Lorem Pixum"> <!--Lagt til aria-label for bedre tilgjengelighet-->
+                <section id="banner2" aria-label="Et bilde av et hus på vinteren" itemscope itemtype="https://schema.org/ImageObject"> <!--Lagt til aria-label for bedre tilgjengelighet-->
+                    <meta itemprop="url" content="pictures/Banner2-Desktop.jpg">
+                    <meta itemprop="contentUrl" content="pictures/Banner2-Desktop.jpg">
+                    <meta itemprop="width" content="900">
+                    <meta itemprop="height" content="650">
+                    <meta itemprop="description" content="Et hus på vinteren">
                     <h2>At vero eos et accamus et iusto odio qui magni eos qui ratione.</h2>
                     <p>Sed ut peciatis unde omnis iste natus error sit voltem acctium doloue latium, 
                         totam rem aperiam.</p>
                     <a href="index.html">Les mer</a>
                 </section>
-                
-                <section id="banner3" aria-label="Et tilfeldig bilde fra Lorem Pixum"> <!--Lagt til aria-label for bedre tilgjengelighet-->
+                <section id="banner3" aria-label="Et bilde av en mairhøne på en blomst" itemscope itemtype="https://schema.org/ImageObject"> <!--Lagt til aria-label for bedre tilgjengelighet-->
+                    <meta itemprop="url" content="pictures/Banner3-Desktop.jpg">
+                    <meta itemprop="contentUrl" content="pictures/Banner3-Desktop.jpg">
+                    <meta itemprop="width" content="900">
+                    <meta itemprop="height" content="650">
+                    <meta itemprop="description" content="En mairhøne på en blomst">
                     <h2>At vero eos et accamus et iusto odio qui magni eos qui ratione.</h2>
                     <p>Sed ut peciatis unde omnis iste natus error sit voltem acctium doloue latium, 
                         totam rem aperiam.</p>
@@ -74,100 +94,124 @@
                     <li><a href="#">Best Sellers</a></li>
                 </ul>
                 <article>
-                    <section class="product_card">
+                    <section class="product_card" itemscope itemtype="https://schema.org/Product">
                         <i class="fa-regular fa-heart"></i>
-                        <img src="https://picsum.photos/1000" alt="Et tilfeldig bilde fra Lorem Pixum"> <!--Lagt til alt-tag for bedre tilgjengelighet-->
+                        <picture> <!--https://www.debugbear.com/blog/responsive-images-->
+                            <source srcset="pictures/Product-card-Desktop.jpg" media="(min-width: 1000px)"> <!--Image by <a href="https://pixabay.com/users/säubrenner-42303874/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8567074">Andreas Hangebrock</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8567074">Pixabay</a>-->
+                            <img src="pictures/Product-card.jpg" alt="Et bilde av fjellandskap" itemprop="image"> <!--Lagt til alt-tag for bedre tilgjengelighet--> <!--Image by <a href="https://pixabay.com/users/säubrenner-42303874/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8567074">Andreas Hangebrock</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8567074">Pixabay</a>-->
+                        </picture>
                         <section class="product_name_price">
-                            <a lang="en" href="product.html" class="bold">Product name</a> <!-- Lagt til lang for riktig språk å lette tilgjengeligheten -->
-                            <p>Kr 1999</p>
+                            <a lang="en" href="product.html" class="bold"><span itemprop="name">Product name</span></a> <!-- Lagt til lang for riktig språk å lette tilgjengeligheten -->
+                            <p itemprop="offers" itemscope itemtype="https://schema.org/Offer"><span itemprop="priceCurrency" content="NOK">Kr</span> <span itemprop="price">1999</span></p>
                         </section>
-                        <section class="reviews">
+                        <section class="reviews" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-regular fa-star"></i>
-                            <p lang="en" class="bold">842 Reviews</p> <!-- Lagt til lang for riktig språk å lette tilgjengeligheten -->
+                            <meta itemprop="ratingValue" content="4">
+                            <p lang="en" class="bold"><span itemprop="reviewCount">842</span> Reviews</p> <!-- Lagt til lang for riktig språk å lette tilgjengeligheten -->
                         </section>
                     </section>
-                    <section class="product_card">
+                    <section class="product_card" itemscope itemtype="https://schema.org/Product">
                         <i class="fa-regular fa-heart"></i>
-                        <img src="https://picsum.photos/1000" alt="Et tilfeldig bilde fra Lorem Pixum"> <!--Lagt til alt-tag for bedre tilgjengelighet-->
+                        <picture> <!--https://www.debugbear.com/blog/responsive-images-->
+                            <source srcset="pictures/Product-card-Desktop.jpg" media="(min-width: 1000px)"> <!--Image by <a href="https://pixabay.com/users/säubrenner-42303874/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8567074">Andreas Hangebrock</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8567074">Pixabay</a>-->
+                            <img src="pictures/Product-card.jpg" alt="Et bilde av fjellandskap" itemprop="image"> <!--Lagt til alt-tag for bedre tilgjengelighet--> <!--Image by <a href="https://pixabay.com/users/säubrenner-42303874/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8567074">Andreas Hangebrock</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8567074">Pixabay</a>-->
+                        </picture>
                         <section class="product_name_price">
-                            <a lang="en" href="product.html" class="bold">Product name</a> <!-- Lagt til lang for riktig språk å lette tilgjengeligheten -->
-                            <p>Kr 1999</p>
+                            <a lang="en" href="product.html" class="bold"><span itemprop="name">Product name</span></a> <!-- Lagt til lang for riktig språk å lette tilgjengeligheten -->
+                            <p itemprop="offers" itemscope itemtype="https://schema.org/Offer"><span itemprop="priceCurrency" content="NOK">Kr</span> <span itemprop="price">1999</span></p>
                         </section>
-                        <section class="reviews">
+                        <section class="reviews" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-regular fa-star"></i>
-                            <p lang="en" class="bold">842 Reviews</p> <!-- Lagt til lang for riktig språk å lette tilgjengeligheten -->
+                            <meta itemprop="ratingValue" content="4">
+                            <p lang="en" class="bold"><span itemprop="reviewCount">842</span> Reviews</p> <!-- Lagt til lang for riktig språk å lette tilgjengeligheten -->
                         </section>
                     </section>
-                    <section class="product_card">
+                    <section class="product_card" itemscope itemtype="https://schema.org/Product">
                         <i class="fa-regular fa-heart"></i>
-                        <img src="https://picsum.photos/1000" alt="Et tilfeldig bilde fra Lorem Pixum"> <!--Lagt til alt-tag for bedre tilgjengelighet-->
+                        <picture> <!--https://www.debugbear.com/blog/responsive-images-->
+                            <source srcset="pictures/Product-card-Desktop.jpg" media="(min-width: 1000px)"> <!--Image by <a href="https://pixabay.com/users/säubrenner-42303874/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8567074">Andreas Hangebrock</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8567074">Pixabay</a>-->
+                            <img src="pictures/Product-card.jpg" alt="Et bilde av fjellandskap" itemprop="image"> <!--Lagt til alt-tag for bedre tilgjengelighet--> <!--Image by <a href="https://pixabay.com/users/säubrenner-42303874/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8567074">Andreas Hangebrock</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8567074">Pixabay</a>-->
+                        </picture>
                         <section class="product_name_price">
-                            <a lang="en" href="product.html" class="bold">Product name</a> <!-- Lagt til lang for riktig språk å lette tilgjengeligheten -->
-                            <p>Kr 1999</p>
+                            <a lang="en" href="product.html" class="bold"><span itemprop="name">Product name</span></a> <!-- Lagt til lang for riktig språk å lette tilgjengeligheten -->
+                            <p itemprop="offers" itemscope itemtype="https://schema.org/Offer"><span itemprop="priceCurrency" content="NOK">Kr</span> <span itemprop="price">1999</span></p>
                         </section>
-                        <section class="reviews">
+                        <section class="reviews" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-regular fa-star"></i>
-                            <p lang="en" class="bold">842 Reviews</p> <!-- Lagt til lang for riktig språk å lette tilgjengeligheten -->
+                            <meta itemprop="ratingValue" content="4">
+                            <p lang="en" class="bold"><span itemprop="reviewCount">842</span> Reviews</p> <!-- Lagt til lang for riktig språk å lette tilgjengeligheten -->
                         </section>
                     </section>
-                    <section class="product_card">
+                    <section class="product_card" itemscope itemtype="https://schema.org/Product">
                         <i class="fa-regular fa-heart"></i>
-                        <img src="https://picsum.photos/1000" alt="Et tilfeldig bilde fra Lorem Pixum"> <!--Lagt til alt-tag for bedre tilgjengelighet-->
+                        <picture> <!--https://www.debugbear.com/blog/responsive-images-->
+                            <source srcset="pictures/Product-card-Desktop.jpg" media="(min-width: 1000px)"> <!--Image by <a href="https://pixabay.com/users/säubrenner-42303874/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8567074">Andreas Hangebrock</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8567074">Pixabay</a>-->
+                            <img src="pictures/Product-card.jpg" alt="Et bilde av fjellandskap" itemprop="image"> <!--Lagt til alt-tag for bedre tilgjengelighet--> <!--Image by <a href="https://pixabay.com/users/säubrenner-42303874/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8567074">Andreas Hangebrock</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8567074">Pixabay</a>-->
+                        </picture>
                         <section class="product_name_price">
-                            <a lang="en" href="product.html" class="bold">Product name</a> <!-- Lagt til lang for riktig språk å lette tilgjengeligheten -->
-                            <p>Kr 1999</p>
+                            <a lang="en" href="product.html" class="bold"><span itemprop="name">Product name</span></a> <!-- Lagt til lang for riktig språk å lette tilgjengeligheten -->
+                            <p itemprop="offers" itemscope itemtype="https://schema.org/Offer"><span itemprop="priceCurrency" content="NOK">Kr</span> <span itemprop="price">1999</span></p>
                         </section>
-                        <section class="reviews">
+                        <section class="reviews" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-regular fa-star"></i>
-                            <p lang="en" class="bold">842 Reviews</p> <!-- Lagt til lang for riktig språk å lette tilgjengeligheten -->
+                            <meta itemprop="ratingValue" content="4">
+                            <p lang="en" class="bold"><span itemprop="reviewCount">842</span> Reviews</p> <!-- Lagt til lang for riktig språk å lette tilgjengeligheten -->
                         </section>
                     </section>
-                    <section class="product_card">
+                    <section class="product_card" itemscope itemtype="https://schema.org/Product">
                         <i class="fa-regular fa-heart"></i>
-                        <img src="https://picsum.photos/1000" alt="Et tilfeldig bilde fra Lorem Pixum"> <!--Lagt til alt-tag for bedre tilgjengelighet-->
+                        <picture> <!--https://www.debugbear.com/blog/responsive-images-->
+                            <source srcset="pictures/Product-card-Desktop.jpg" media="(min-width: 1000px)"> <!--Image by <a href="https://pixabay.com/users/säubrenner-42303874/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8567074">Andreas Hangebrock</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8567074">Pixabay</a>-->
+                            <img src="pictures/Product-card.jpg" alt="Et bilde av fjellandskap" itemprop="image"> <!--Lagt til alt-tag for bedre tilgjengelighet--> <!--Image by <a href="https://pixabay.com/users/säubrenner-42303874/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8567074">Andreas Hangebrock</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8567074">Pixabay</a>-->
+                        </picture>
                         <section class="product_name_price">
-                            <a lang="en" href="product.html" class="bold">Product name</a> <!-- Lagt til lang for riktig språk å lette tilgjengeligheten -->
-                            <p>Kr 1999</p>
+                            <a lang="en" href="product.html" class="bold"><span itemprop="name">Product name</span></a> <!-- Lagt til lang for riktig språk å lette tilgjengeligheten -->
+                            <p itemprop="offers" itemscope itemtype="https://schema.org/Offer"><span itemprop="priceCurrency" content="NOK">Kr</span> <span itemprop="price">1999</span></p>
                         </section>
-                        <section class="reviews">
+                        <section class="reviews" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-regular fa-star"></i>
-                            <p lang="en" class="bold">842 Reviews</p> <!-- Lagt til lang for riktig språk å lette tilgjengeligheten -->
+                            <meta itemprop="ratingValue" content="4">
+                            <p lang="en" class="bold"><span itemprop="reviewCount">842</span> Reviews</p> <!-- Lagt til lang for riktig språk å lette tilgjengeligheten -->
                         </section>
                     </section>
-                    <section class="product_card">
+                    <section class="product_card" itemscope itemtype="https://schema.org/Product">
                         <i class="fa-regular fa-heart"></i>
-                        <img src="https://picsum.photos/1000" alt="Et tilfeldig bilde fra Lorem Pixum"> <!--Lagt til alt-tag for bedre tilgjengelighet-->
+                        <picture> <!--https://www.debugbear.com/blog/responsive-images-->
+                            <source srcset="pictures/Product-card-Desktop.jpg" media="(min-width: 1000px)"> <!--Image by <a href="https://pixabay.com/users/säubrenner-42303874/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8567074">Andreas Hangebrock</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8567074">Pixabay</a>-->
+                            <img src="pictures/Product-card.jpg" alt="Et bilde av fjellandskap" itemprop="image"> <!--Lagt til alt-tag for bedre tilgjengelighet--> <!--Image by <a href="https://pixabay.com/users/säubrenner-42303874/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8567074">Andreas Hangebrock</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8567074">Pixabay</a>-->
+                        </picture>
                         <section class="product_name_price">
-                            <a lang="en" href="product.html" class="bold">Product name</a> <!-- Lagt til lang for riktig språk å lette tilgjengeligheten -->
-                            <p>Kr 1999</p>
+                            <a lang="en" href="product.html" class="bold"><span itemprop="name">Product name</span></a> <!-- Lagt til lang for riktig språk å lette tilgjengeligheten -->
+                            <p itemprop="offers" itemscope itemtype="https://schema.org/Offer"><span itemprop="priceCurrency" content="NOK">Kr</span> <span itemprop="price">1999</span></p>
                         </section>
-                        <section class="reviews">
+                        <section class="reviews" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-regular fa-star"></i>
-                            <p lang="en" class="bold">842 Reviews</p> <!-- Lagt til lang for riktig språk å lette tilgjengeligheten -->
+                            <meta itemprop="ratingValue" content="4">
+                            <p lang="en" class="bold"><span itemprop="reviewCount">842</span> Reviews</p> <!-- Lagt til lang for riktig språk å lette tilgjengeligheten -->
                         </section>
                     </section>
                 </article>
@@ -176,29 +220,29 @@
                 <h3 class="centered_h">Våre mest populære kategorier</h3>
                 <p>Oppdag det beste av det beste</p>
                 <section lang="en" id="category_section"> <!-- Lagt til lang for riktig språk å lette tilgjengeligheten -->
-                    <section class="category_container">
-                        <article aria-label="Et tilfeldig bilde fra Lorem Pixum"> <!--Lagt til aria-label for bedre tilgjengelighet-->
-                            <h4>Category 1</h4>
+                    <section class="category_container" itemscope itemtype="https://schema.org/CategoryCode">
+                        <article aria-label="Et bilde av pepperkaker"> <!--Lagt til aria-label for bedre tilgjengelighet-->
+                            <h4 itemprop="name">Category 1</h4>
                         </article>
                     </section>
-                    <section class="category_container2">
-                        <article aria-label="Et tilfeldig bilde fra Lorem Pixum"> <!--Lagt til aria-label for bedre tilgjengelighet-->
-                            <h4>Category 2</h4>
+                    <section class="category_container2" itemscope itemtype="https://schema.org/CategoryCode">
+                        <article aria-label="Et bilde av en oransje katt"> <!--Lagt til aria-label for bedre tilgjengelighet-->
+                            <h4 itemprop="name">Category 2</h4>
                         </article>
                     </section>
-                    <section class="category_container3">
-                        <article aria-label="Et tilfeldig bilde fra Lorem Pixum"> <!--Lagt til aria-label for bedre tilgjengelighet-->
-                            <h4>Category 3</h4>
+                    <section class="category_container3" itemscope itemtype="https://schema.org/CategoryCode">
+                        <article aria-label="Et bilde av en skjeggagam"> <!--Lagt til aria-label for bedre tilgjengelighet-->
+                            <h4 itemprop="name">Category 3</h4>
                         </article>
                     </section>
-                    <section class="category_container4">
-                        <article aria-label="Et tilfeldig bilde fra Lorem Pixum"> <!--Lagt til aria-label for bedre tilgjengelighet-->
-                            <h4>Category 4</h4>
+                    <section class="category_container4" itemscope itemtype="https://schema.org/CategoryCode">
+                        <article aria-label="Et bilde av to røde epler"> <!--Lagt til aria-label for bedre tilgjengelighet-->
+                            <h4 itemprop="name">Category 4</h4>
                         </article>
                     </section>
-                    <section class="category_container5">
-                        <article aria-label="Et tilfeldig bilde fra Lorem Pixum"> <!--Lagt til aria-label for bedre tilgjengelighet-->
-                            <h4>Category 5</h4>
+                    <section class="category_container5" itemscope itemtype="https://schema.org/CategoryCode">
+                        <article aria-label="Et bilde av to bøker"> <!--Lagt til aria-label for bedre tilgjengelighet-->
+                            <h4 itemprop="name">Category 5</h4>
                         </article>
                     </section>
                 </section>
@@ -206,61 +250,117 @@
             <section id="reviews">
                 <h3 id="review_h3">Anmeldelser</h3>
                 <article id="review_scroll">
-                    <section class="review_cards">
-                        <img src="https://picsum.photos/80" alt="Et tilfeldig bilde fra Lorem Pixum"> <!--Lagt til alt-tag for bedre tilgjengelighet-->
-                        <p class="review_name">Rober Labrador</p>
+                    <section class="review_cards" itemscope itemtype="https://schema.org/Review">
+                        <img src="pictures/review-profile.jpg" alt="Et bilde av en hund"> <!--Lagt til alt-tag for bedre tilgjengelighet--> <!--Image by <a href="https://pixabay.com/users/dannaragrim-5924518/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=7128749">Dann Aragrim</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=7128749">Pixabay</a>-->
+                        <p class="review_name" itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Rober Labrador</span></p>
                         <section class="reviews">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-regular fa-star"></i>
-                            <i class="fa-regular fa-star"></i>
+                            <span aria-label="3 av 5 stjerner">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </span>
                         </section>
-                        <p class="review_text">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est 
+                        <span itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+                            <meta itemprop="ratingValue" content="3">
+                            <meta itemprop="bestRating" content="5">
+                        </span>
+                        <p class="review_text" itemprop="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est 
                             eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas 
                             assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis.</p>
+                        <span itemprop="itemReviewed" itemscope itemtype="https://schema.org/Product">
+                            <meta itemprop="name" content="Product name">
+                            <span itemprop="aggregateRating" itemtype="https://schema.org/AggregateRating" itemscope>
+                                <meta itemprop="reviewCount" content="842">
+                                <meta itemprop="ratingValue" content="4">
+                                <meta itemprop="bestRating" content="5">
+                            </span>
+                        </span>
                     </section>
-                    <section class="review_cards">
-                        <img src="https://picsum.photos/80" alt="Et tilfeldig bilde fra Lorem Pixum"> <!--Lagt til alt-tag for bedre tilgjengelighet-->
-                        <p class="review_name">Rober Labrador</p>
+                    <section class="review_cards" itemscope itemtype="https://schema.org/Review">
+                        <img src="pictures/review-profile.jpg" alt="Et bilde av en hund"> <!--Lagt til alt-tag for bedre tilgjengelighet--> <!--Image by <a href="https://pixabay.com/users/dannaragrim-5924518/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=7128749">Dann Aragrim</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=7128749">Pixabay</a>-->
+                        <p class="review_name" itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Rober Labrador</span></p>
                         <section class="reviews">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-regular fa-star"></i>
-                            <i class="fa-regular fa-star"></i>
+                            <span aria-label="3 av 5 stjerner">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </span>
                         </section>
-                        <p class="review_text">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est 
+                        <span itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+                            <meta itemprop="ratingValue" content="3">
+                            <meta itemprop="bestRating" content="5">
+                        </span>
+                        <p class="review_text" itemprop="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est 
                             eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas 
                             assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis.</p>
+                        <span itemprop="itemReviewed" itemscope itemtype="https://schema.org/Product">
+                            <meta itemprop="name" content="Product name">
+                            <span itemprop="aggregateRating" itemtype="https://schema.org/AggregateRating" itemscope>
+                                <meta itemprop="reviewCount" content="842">
+                                <meta itemprop="ratingValue" content="4">
+                                <meta itemprop="bestRating" content="5">
+                            </span>
+                        </span>
                     </section>
-                    <section class="review_cards">
-                        <img src="https://picsum.photos/80" alt="Et tilfeldig bilde fra Lorem Pixum"> <!--Lagt til alt-tag for bedre tilgjengelighet-->
-                        <p class="review_name">Rober Labrador</p>
+                    <section class="review_cards" itemscope itemtype="https://schema.org/Review">
+                        <img src="pictures/review-profile.jpg" alt="Et bilde av en hund"> <!--Lagt til alt-tag for bedre tilgjengelighet--> <!--Image by <a href="https://pixabay.com/users/dannaragrim-5924518/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=7128749">Dann Aragrim</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=7128749">Pixabay</a>-->
+                        <p class="review_name" itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Rober Labrador</span></p>
                         <section class="reviews">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-regular fa-star"></i>
-                            <i class="fa-regular fa-star"></i>
+                            <span aria-label="3 av 5 stjerner">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </span>
                         </section>
-                        <p class="review_text">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est 
+                        <span itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+                            <meta itemprop="ratingValue" content="3">
+                            <meta itemprop="bestRating" content="5">
+                        </span>
+                        <p class="review_text" itemprop="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est 
                             eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas 
                             assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis.</p>
+                        <span itemprop="itemReviewed" itemscope itemtype="https://schema.org/Product">
+                            <meta itemprop="name" content="Product name">
+                            <span itemprop="aggregateRating" itemtype="https://schema.org/AggregateRating" itemscope>
+                                <meta itemprop="reviewCount" content="842">
+                                <meta itemprop="ratingValue" content="4">
+                                <meta itemprop="bestRating" content="5">
+                            </span>
+                        </span>
                     </section>
-                    <section class="review_cards">
-                        <img src="https://picsum.photos/80" alt="Et tilfeldig bilde fra Lorem Pixum"> <!--Lagt til alt-tag for bedre tilgjengelighet-->
-                        <p class="review_name">Rober Labrador</p>
+                    <section class="review_cards" itemscope itemtype="https://schema.org/Review">
+                        <img src="pictures/review-profile.jpg" alt="Et bilde av en hund"> <!--Lagt til alt-tag for bedre tilgjengelighet--> <!--Image by <a href="https://pixabay.com/users/dannaragrim-5924518/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=7128749">Dann Aragrim</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=7128749">Pixabay</a>-->
+                        <p class="review_name" itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Rober Labrador</span></p>
                         <section class="reviews">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-regular fa-star"></i>
-                            <i class="fa-regular fa-star"></i>
+                            <span aria-label="3 av 5 stjerner">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </span>
                         </section>
-                        <p class="review_text">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est 
+                        <span itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+                            <meta itemprop="ratingValue" content="3">
+                            <meta itemprop="bestRating" content="5">
+                        </span>
+                        <p class="review_text" itemprop="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est 
                             eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas 
                             assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis.</p>
+                        <span itemprop="itemReviewed" itemscope itemtype="https://schema.org/Product">
+                            <meta itemprop="name" content="Product name">
+                            <span itemprop="aggregateRating" itemtype="https://schema.org/AggregateRating" itemscope>
+                                <meta itemprop="reviewCount" content="842">
+                                <meta itemprop="ratingValue" content="4">
+                                <meta itemprop="bestRating" content="5">
+                            </span>
+                        </span>
                     </section>
                 </article>
             </section>

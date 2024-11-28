@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dette er kassesiden til eksamensprosjektet for webutvikling, høsten 2024">
+    <meta name="author" content="Nicolai Aardalen">
+    <meta name="keywords" content="Nettbutikk, Kasseside, Handlekurv, Bestilling, Eksamensprosjekt">
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
     <link rel="stylesheet" href="ikoner/fontawesome-free-6.6.0-web/css/solid.css">
     <link rel="stylesheet" href="ikoner/fontawesome-free-6.6.0-web/css/fontawesome.css">
@@ -41,17 +44,17 @@
             <h1 class="centered_h">Kasse</h1>
             <section class="checkout_frame">
                 <h2>1. SHOPPINGBAGEN DIN</h2>
-                <section class="full_item">
-                    <img src="https://picsum.photos/150/190" alt="Et tilfeldig bilde fra Lorem Pixum"> <!--Lagt til alt-tag for bedre tilgjengelighet-->
+                <section class="full_item" itemscope itemtype="https://schema.org/Product">
+                    <img src="pictures/Product_in_cart.jpg" alt="Et bilde av en brudekjole" itemprop="image"> <!--Lagt til alt-tag for bedre tilgjengelighet--> <!--Image by <a href="https://pixabay.com/users/asphotohrapy-1546875/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1967312">AS Photograpy</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1967312">Pixabay</a>-->
                     <section class="item_description">
                         <article>
-                            <p lang="en" class="bold">PRODUCT NAME</p>  <!-- Lagt til lang for riktig språk å lette tilgjengeligheten -->
-                            <p>Kr 1999</p>
-                            <p>Farge: beige</p>
+                            <p lang="en" class="bold" itemprop="name">PRODUCT NAME</p>  <!-- Lagt til lang for riktig språk å lette tilgjengeligheten -->
+                            <p itemprop="offers" itemscope itemtype="https://schema.org/Offer"><span itemprop="priceCurrency" content="NOK">Kr</span> <span itemprop="price">1999</span></p>
+                            <p>Farge: <span itemprop="color">beige</span></p>
                         </article>
                         <form>
                             <label>Størrelse
-                                <select name="size"> <!--https://blog.logrocket.com/creating-custom-select-dropdown-css/-->
+                                <select name="size" itemprop="size"> <!--https://blog.logrocket.com/creating-custom-select-dropdown-css/-->
                                     <option>XS</option>
                                     <option selected>S</option>
                                     <option>M</option>
@@ -59,8 +62,8 @@
                                     <option>XL</option>
                                 </select>
                             </label>
-                            <label>Antall
-                                <input type="number" name="number" value="1"> <!--https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/number-->
+                            <label itemscope itemtype="https://schema.org/ItemList">Antall
+                                <input type="number" name="number" value="1" itemprop="numberOfItems" content="1"> <!--https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/number-->
                             </label>
                         </form>
                     </section>
@@ -69,17 +72,17 @@
                         <i class="fa-solid fa-trash"></i>
                     </section>
                 </section>
-                <section class="full_item">
-                    <img src="https://picsum.photos/150/190" alt="Et tilfeldig bilde fra Lorem Pixum"> <!--Lagt til alt-tag for bedre tilgjengelighet-->
+                <section class="full_item" itemscope itemtype="https://schema.org/Product">
+                    <img src="pictures/Product_in_cart.jpg" alt="Et bilde av en brudekjole" itemprop="image"> <!--Lagt til alt-tag for bedre tilgjengelighet--> <!--Image by <a href="https://pixabay.com/users/asphotohrapy-1546875/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1967312">AS Photograpy</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1967312">Pixabay</a>-->
                     <section class="item_description">
                         <article>
-                            <p lang="en" class="bold">PRODUCT NAME</p> <!-- Lagt til lang for riktig språk å lette tilgjengeligheten -->
-                            <p>Kr 1999</p>
-                            <p>Farge: beige</p>
+                            <p lang="en" class="bold" itemprop="name">PRODUCT NAME</p>  <!-- Lagt til lang for riktig språk å lette tilgjengeligheten -->
+                            <p itemprop="offers" itemscope itemtype="https://schema.org/Offer"><span itemprop="priceCurrency" content="NOK">Kr</span> <span itemprop="price">1999</span></p>
+                            <p>Farge: <span itemprop="color">beige</span></p>
                         </article>
                         <form>
                             <label>Størrelse
-                                <select name="size"> <!--https://blog.logrocket.com/creating-custom-select-dropdown-css/-->
+                                <select name="size" itemprop="size"> <!--https://blog.logrocket.com/creating-custom-select-dropdown-css/-->
                                     <option>XS</option>
                                     <option selected>S</option>
                                     <option>M</option>
@@ -87,8 +90,8 @@
                                     <option>XL</option>
                                 </select>
                             </label>
-                            <label>Antall
-                                <input type="number" name="number" value="1"> <!--https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/number-->
+                            <label itemscope itemtype="https://schema.org/ItemList">Antall
+                                <input type="number" name="number" value="1" itemprop="numberOfItems" content="1"> <!--https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/number-->
                             </label>
                         </form>
                     </section>
@@ -97,17 +100,17 @@
                         <i class="fa-solid fa-trash"></i>
                     </section>
                 </section>
-                <section class="full_item">
-                    <img src="https://picsum.photos/150/190" alt="Et tilfeldig bilde fra Lorem Pixum"> <!--Lagt til alt-tag for bedre tilgjengelighet-->
+                <section class="full_item" itemscope itemtype="https://schema.org/Product">
+                    <img src="pictures/Product_in_cart.jpg" alt="Et bilde av en brudekjole" itemprop="image"> <!--Lagt til alt-tag for bedre tilgjengelighet--> <!--Image by <a href="https://pixabay.com/users/asphotohrapy-1546875/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1967312">AS Photograpy</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1967312">Pixabay</a>-->
                     <section class="item_description">
                         <article>
-                            <p lang="en" class="bold">PRODUCT NAME</p> <!-- Lagt til lang for riktig språk å lette tilgjengeligheten -->
-                            <p>Kr 1999</p>
-                            <p>Farge: beige</p>
+                            <p lang="en" class="bold" itemprop="name">PRODUCT NAME</p>  <!-- Lagt til lang for riktig språk å lette tilgjengeligheten -->
+                            <p itemprop="offers" itemscope itemtype="https://schema.org/Offer"><span itemprop="priceCurrency" content="NOK">Kr</span> <span itemprop="price">1999</span></p>
+                            <p>Farge: <span itemprop="color">beige</span></p>
                         </article>
                         <form>
                             <label>Størrelse
-                                <select name="size"> <!--https://blog.logrocket.com/creating-custom-select-dropdown-css/-->
+                                <select name="size" itemprop="size"> <!--https://blog.logrocket.com/creating-custom-select-dropdown-css/-->
                                     <option>XS</option>
                                     <option selected>S</option>
                                     <option>M</option>
@@ -115,8 +118,8 @@
                                     <option>XL</option>
                                 </select>
                             </label>
-                            <label>Antall
-                                <input type="number" name="number" value="1"> <!--https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/number-->
+                            <label itemscope itemtype="https://schema.org/ItemList">Antall
+                                <input type="number" name="number" value="1" itemprop="numberOfItems" content="1"> <!--https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/number-->
                             </label>
                         </form>
                     </section>
@@ -125,17 +128,17 @@
                         <i class="fa-solid fa-trash"></i>
                     </section>
                 </section>
-                <section class="full_item">
-                    <img src="https://picsum.photos/150/190" alt="Et tilfeldig bilde fra Lorem Pixum"> <!--Lagt til alt-tag for bedre tilgjengelighet-->
+                <section class="full_item" itemscope itemtype="https://schema.org/Product">
+                    <img src="pictures/Product_in_cart.jpg" alt="Et bilde av en brudekjole" itemprop="image"> <!--Lagt til alt-tag for bedre tilgjengelighet--> <!--Image by <a href="https://pixabay.com/users/asphotohrapy-1546875/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1967312">AS Photograpy</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1967312">Pixabay</a>-->
                     <section class="item_description">
                         <article>
-                            <p lang="en" class="bold">PRODUCT NAME</p>  <!-- Lagt til lang for riktig språk å lette tilgjengeligheten -->
-                            <p>Kr 1999</p>
-                            <p>Farge: beige</p>
+                            <p lang="en" class="bold" itemprop="name">PRODUCT NAME</p>  <!-- Lagt til lang for riktig språk å lette tilgjengeligheten -->
+                            <p itemprop="offers" itemscope itemtype="https://schema.org/Offer"><span itemprop="priceCurrency" content="NOK">Kr</span> <span itemprop="price">1999</span></p>
+                            <p>Farge: <span itemprop="color">beige</span></p>
                         </article>
                         <form>
                             <label>Størrelse
-                                <select name="size"> <!--https://blog.logrocket.com/creating-custom-select-dropdown-css/-->
+                                <select name="size" itemprop="size"> <!--https://blog.logrocket.com/creating-custom-select-dropdown-css/-->
                                     <option>XS</option>
                                     <option selected>S</option>
                                     <option>M</option>
@@ -143,8 +146,8 @@
                                     <option>XL</option>
                                 </select>
                             </label>
-                            <label>Antall
-                                <input type="number" name="number" value="1"> <!--https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/number-->
+                            <label itemscope itemtype="https://schema.org/ItemList">Antall
+                                <input type="number" name="number" value="1" itemprop="numberOfItems" content="1"> <!--https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/number-->
                             </label>
                         </form>
                     </section>
@@ -156,14 +159,14 @@
             </section>
             <section class="checkout_frame">
                 <h2>2. DINE OPPLYSNINGER</h2>
-                <form>
+                <form itemscope itemprop="Person" itemtype="https://schema.org/Person">
                     <h3 class="delivery_h3">Leveringsadresse</h3>
                     <section class="personal_information" id="PI_grid">
                         <label for="first_name">Fornavn
-                            <input name="first_name" id="first_name" type="text" placeholder="Ola*">
+                            <input name="first_name" id="first_name" type="text" placeholder="Ola*" itemprop="givenName" content="Ola">
                         </label>
                         <label for="last_name">Etternavn
-                            <input name="last_name" id="last_name" type="text" placeholder="Nordmann*">
+                            <input name="last_name" id="last_name" type="text" placeholder="Nordmann*" itemprop="familyName" content="Nordmann">
                         </label>
                         <label for="street" id="street_adress">Gateadresse
                             <input name="street" id="street" type="text" placeholder="BRA veien 4*">
@@ -178,10 +181,10 @@
                     <h3 class="delivery_h3">Kontaktinformasjon</h3>
                     <section class="personal_information">
                         <label for="e-mail">E-post
-                            <input name="e-mail" id="e-mail" type="text" placeholder="Olanordmann@hiof.no..*">
+                            <input name="e-mail" id="e-mail" type="text" placeholder="Olanordmann@hiof.no..*" itemprop="email" content="Olanordmann@hiof.no">
                         </label>
                         <label for="phone">Telefon
-                            <input name="phone" id="phone" type="text" placeholder="+4749***018*">
+                            <input name="phone" id="phone" type="text" placeholder="+4749***018*" itemprop="telephone" content="+4749***018">
                         </label>
                     </section>
                     <section>
@@ -194,29 +197,29 @@
                 <h2>3. Levering</h2>
                 <h3 class="uppercase">Leveringsvalg</h3>
                 <form>
-                    <section class="deliveriy_frame">
+                    <section class="deliveriy_frame" itemscope itemtype="https://schema.org/ShippingDeliveryTime">
                             <label for="express_home">
                                 <input name="delivery_option" id="express_home" type="radio">
-                            Ekspress Hjemlevering</label>
-                            <p class="gray">3-4 Virkedager</p>
-                            <p class="flex-icon">59 kr <i class="fa-solid fa-truck-fast"></i></p>
-                            <p class="delivery_info">bestill hverdag før 08:00* for levering neste arbeidsdag. Leveres hjem til seg før frokost mandag til lørdag. 
+                            <span itemprop="name">Ekspress Hjemlevering</span></label>
+                            <p class="gray" itemprop="businessDays">3-4 Virkedager</p>
+                            <p class="flex-icon" itemscope itemtype="https://schema.org/Offer"><span itemprop="price">59</span> <span itemprop="priceCurrency" content="NOK">kr</span> <i class="fa-solid fa-truck-fast"></i></p>
+                            <p class="delivery_info" itemprop="description">bestill hverdag før 08:00* for levering neste arbeidsdag. Leveres hjem til seg før frokost mandag til lørdag. 
                                 *For elevring til postnummer 4000-7999 er leveringstiden 2 arbeidsdager, for postnummer 8000-9999 er leveringstiden 3 arbeidsdager.</p>
                     </section>
-                    <section class="deliveriy_frame">
+                    <section class="deliveriy_frame" itemscope itemtype="https://schema.org/ShippingDeliveryTime">
                             <label for="express_pickup">
                                 <input name="delivery_option" id="express_pickup" type="radio">
-                            Ekspress Pakke til utleveringssted</label>
-                            <p class="gray">1-3 Virkedager</p>
-                            <p class="flex-icon">59 kr <i class="fa-brands fa-dhl"></i></p>
+                            <span itemprop="name">Ekspress Pakke til utleveringssted</span></label>
+                            <p class="gray" itemprop="businessDays">1-3 Virkedager</p>
+                            <p class="flex-icon" itemscope itemtype="https://schema.org/Offer"><span itemprop="price">59</span> <span itemprop="priceCurrency" content="NOK">kr</span> <i class="fa-brands fa-dhl"></i></p>
                     </section>
-                    <section class="deliveriy_frame">
+                    <section class="deliveriy_frame" itemscope itemtype="https://schema.org/ShippingDeliveryTime">
                             <label for="standard_home">
                                 <input name="delivery_option" id="standard_home" type="radio">
-                            Standard Hjemlevering</label>
-                            <p class="gray">5-8 Virkedager</p>
-                            <p class="flex-icon">Gratis <i class="fa-solid fa-box"></i></p>
-                            <p class="delivery_info">Leveres hjem til deg før frokost mandag til lørdag innen 4-7 hverdager.</p>
+                            <span itemprop="name">Standard Hjemlevering</span></label>
+                            <p class="gray" itemprop="businessDays">5-8 Virkedager</p>
+                            <p class="flex-icon" itemscope itemtype="https://schema.org/Offer"><span itemprop="price" content="0">Gratis</span> <i class="fa-solid fa-box"></i></p>
+                            <p class="delivery_info" itemprop="description">Leveres hjem til deg før frokost mandag til lørdag innen 4-7 hverdager.</p>
                     </section>
                 </form>
             </section>
@@ -237,7 +240,7 @@
                     </section>
                     <section id="payment_confirm">
                         <p>Å betale inkl. mva.</p>
-                        <p id="total_price">1 199 kr</p>
+                        <p id="total_price" itemscope itemtype="https://schema.org/Offer"><span itemprop="price" content="1199">1 199</span> <span itemprop="priceCurrency" content="NOK">kr</span></p>
                         <input id="complete_payment" type="submit" value="Fullfør kjøp">
                         <p id="comfirmation_text">Du bekrefter herved at opplysningene og dokumentene du har oppgitt er korrekte og fullstendige. 
                             Leverandøren forbeholder seg retten til å heve eller avslutte avtaleforholdet dersom det forelgger uriktige eller ufullstendige opplysninger</p>
